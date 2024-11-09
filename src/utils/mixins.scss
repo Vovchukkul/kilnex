@@ -1,0 +1,228 @@
+@mixin onMobile {
+    @media (min-width: 375px) {
+      @content;
+    }
+  }
+  
+  @mixin onLargeMobile {
+    @media (min-width: 400px) {
+      @content;
+    }
+  }
+  
+  @mixin onExtendedMobile {
+    @media (min-width: 510px) {
+      @content;
+    }
+  }
+  
+  @mixin onBigMobile {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+  
+  @mixin onSmallTablet {
+    @media (min-width: 640px) {
+      @content;
+    }
+  }
+  
+  @mixin onTablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  @mixin onBigTablet {
+    @media (min-width: 854px) {
+      @content;
+    }
+  }
+  
+  @mixin onExtendedTablet {
+    @media (min-width: 991px) {
+      @content;
+    }
+  }
+  
+  @mixin onBigDesktop {
+    @media (min-width: 1199px) {
+      @content;
+    }
+  }
+  
+  @mixin onDesktop {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+  
+  @mixin onExtendedDesktop {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  }
+  
+  @mixin onAverageDesktop {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+  
+  @mixin onBiggestDesktop {
+    @media (min-width: 1912px) {
+      @content;
+    }
+  }
+  
+  @mixin onBiggestScreen {
+    @media (min-width: 2000px) {
+      @content;
+    }
+  }
+  
+  @mixin onBiggestScreen2 {
+    @media (min-width: 2250px) {
+      @content;
+    }
+  }
+  
+  @mixin onFullHD {
+    @media (min-width: 2560px) {
+      @content;
+    }
+  }
+  
+  
+  @mixin contentPaddingInline() {
+    padding-inline: 32px;
+  
+    @include onBigTablet() {
+      padding-inline: 72px;
+    }
+  
+    @include onBigDesktop {
+      padding-inline: 118px;
+    }
+  }
+  
+  @mixin title() {
+    font-size: 24px;
+    font-weight: 300;
+    font-family: $namu_normal_font;
+    background: linear-gradient(to right, black 0%, gray 50%, white 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    min-width: 296px;
+  
+    @include onSmallTablet() {
+      font-size: 32px;
+    }
+  
+    @include onExtendedTablet() {
+      font-size: 44px;
+    }
+  
+    @include onTablet() {
+      background: linear-gradient(to right, black 0%, gray 80%, white 100%);
+      background-clip: text;
+      color: transparent;
+    }
+  
+    @include onExtendedDesktop() {
+      font-size: 64px;
+    }
+  
+    @include onBigDesktop() {
+      font-size: 83px;
+    }
+  }
+  
+  @mixin button() {
+    margin: 0 auto;
+    border: 1px solid rgba(23, 23, 23, 1);
+    box-sizing: border-box;
+    height: 39px;
+    width: 189px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: $namu_font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  
+    @include onTablet() {
+      margin: 0;
+    }
+  
+    @include onBigDesktop {
+      height: 55px;
+      width: 233px;
+      font-size: 20px;
+      border-radius: 12px;
+      border-width: 2px;
+      margin: 0 0 0;
+    }
+  
+    @include onDesktop() {
+      height: 66px;
+      width: 280px;
+      font-size: 24px;
+    }
+  
+    @include onBiggestDesktop() {
+      height: 88px;
+      width: 384px;
+      font-size: 32px;
+    }
+  }
+  
+  @mixin subtitle() {
+    font-family: $inter_font;
+    font-weight: 200;
+    font-size: 18px;
+    color: rgba(23, 23, 23, 1);
+    max-width: 1400px;
+  
+    @include onSmallTablet() {
+      font-size: 20px;
+    }
+  
+    @include onExtendedTablet() {
+      font-size: 24px;
+    }
+  
+    @include onExtendedDesktop() {
+      font-size: 28px;
+    }
+  
+    @include onBigDesktop() {
+      font-size: 32px;
+    }
+  }
+  
+  @mixin hover($bg-color, $hover-bg-color, $text-color, $hover-text-color, $border) {
+    background-color: $bg-color;
+    color: $text-color;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  
+    @media (hover: hover) {
+      &:hover {
+        background: $hover-bg-color;
+        color: $hover-text-color;
+        border: $border;
+      }
+    }
+  
+    @media (hover: none) {
+      &:hover {
+        background: $hover-bg-color;
+        color: $hover-text-color;
+        border: $border;
+      }
+    }
+  }

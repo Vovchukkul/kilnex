@@ -1,0 +1,171 @@
+
+.container {
+    padding-inline: 240px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    &_logo {
+        display: flex;
+        gap: 14px;
+    }
+
+    &_logo_img {
+        width: 75px;
+        height: 72px;
+    }
+
+    &_logo_text {
+        width: 149px;
+        height: 56px;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        list-style: none;
+
+        li {
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+
+    a {
+        color: rgba(0, 160, 70, 1);
+        font-size: 20px;
+        text-decoration: none;
+        font-weight: 700;
+    }
+}
+
+.adv {
+    background-image: url('../assets/first_image.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 850px;
+    padding-top: 170px;
+
+    &_left {
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+
+        h1 {
+            line-height: 69px;
+            font-weight: 700;
+            font-size: 46px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &_sub {
+        line-height: 36px;
+        font-weight: 400;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    &_blocks {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &_offer {
+        font-weight: 700;
+        font-size: 96px;
+        color: #FFFFFF;
+    }
+
+    &_block {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &_price {
+        color: #FFFFFF;
+        font-size: 32px;
+        font-weight: 700;
+        position: relative;
+
+        &::after {
+            content: "";
+            height: 1px;
+            width: 90px;
+            position: absolute;
+            bottom: 25px;
+            left: -15px;
+            background-color: #fff;
+        }
+    }
+
+    &_save {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00A046;
+        width: 195px;
+        height: 34px;
+        font-size: 20px;
+        font-weight: 700;
+        color: transparent;
+        
+        span {
+            background-color: #760303; /* Светлый цвет для стеклянного эффекта */
+            background-clip: text;
+        }
+    }
+
+    &_btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: 3px solid #EB7D01;
+        width: 217px;
+        height: 60px;
+        padding-top: 13px;
+        border-radius: 0px;
+        border-bottom: 0;
+        box-sizing: border-box; 
+
+        span {
+            font-weight: 500px;
+            font-size: 22px;
+            color: #FFFFFF;
+        }
+    }
+
+    &_img {
+        display: block;
+        max-width: none;
+        position: relative;
+        top: 2px;
+    }
+}
+
+.com_second {
+    width: 100%;
+    height: 30px;
+}
+
+.second {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+}
