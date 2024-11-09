@@ -1,6 +1,8 @@
 import '../styles/index.scss'
 import '../styles/main.scss'
 import SyncedSliders from './Syncing_slider'
+import button from '../assets/button2.svg';
+import shield from '../assets/icons/shield-tick.svg';
 
 export const Second = () => {
     return (
@@ -12,41 +14,44 @@ export const Second = () => {
               <h2>HEAD FLASHLIGHT WITH EXTRA POWERFUL RED LIGHT SMILE LX02</h2>
               <div className="second_subblock">
                 <span>Available: 21 in stock</span>
-                <div className="second_stars-block">
-                  <div className="second_stars">
-                    <div className="second_star"></div>
-                    <div className="second_star"></div>
-                    <div className="second_star"></div>
-                    <div className="second_star"></div>
-                    <div className="second_star"></div>
+                <div className="stars-block">
+                  <div className="stars">
+                    <div className="star"></div>
+                    <div className="star"></div>
+                    <div className="star"></div>
+                    <div className="star"></div>
+                    <div className="star"></div>
                   </div>
                   <span>(9 customer reviews)</span>
                 </div>
               </div>
               <div className="second_blocks">
-                <p className='second_offer'>62 $</p>
-                <div className="second_block">
+                <div className="second_wrap">
+                  <p className='second_offer'>62 $</p>
                   <p className='second_price'>82 $</p>
-                  <div className="second_save">
-                    <span>Save up to 20%</span>
-                  </div>
+                </div>
+                <div className="second_warranty">
+                  <img className="second_icon" src={shield} alt="shield" />
+                  <span>24 month warranty</span>
                 </div>
               </div>
-              <div className="second_warranty">
-                <img className="second_icon" />
-                <span>24 month warranty</span>
+              <div className="second_sale">
+                <span>SALE</span>
               </div>
-              <p>
+              <p className='second_sub'>
                 The KilNex Smile LX02 is a premium innovative headlamp that combines high quality with affordability. Featuring a powerful red LED of 140 lumens, the model is much more convenient to use during combat missions, hiking, camping, fishing, etc.
               </p>
-              <ul>
+              <ul className='second_list'>
                 <li>Weight of 124 g</li>
                 <li>Dimensions: 88x35x25 mm.</li>
                 <li>3500 mAh battery.</li>
                 <li>IPX8 waterproof</li>
               </ul>
               <p className="second_desr">Read full description</p>
-              <button>SHOP NOW</button>
+              <button className='adv_btn'>
+                  <span>SHOP NOW</span>
+                  <img className='adv_img' src={button} alt="button" />
+              </button>
             </div>
           </div>
           <div className="second_bottom">

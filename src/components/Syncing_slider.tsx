@@ -1,13 +1,15 @@
 import React, { useRef, useEffect, useState } from "react";
+import '../styles/main.scss'
 import Slider from "react-slick";
-
-// Import your images here
 import photo1 from "../assets/1.svg";
 import photo2 from "../assets/2.svg";
 import photo3 from "../assets/3.svg";
 import photo4 from "../assets/4.svg";
 import photo5 from "../assets/5.svg";
 import photo6 from "../assets/6.svg";
+import up from '../assets/icons/chevron-up.svg';
+import down from '../assets/icons/chevron-up(1).svg';
+import { JSX } from "react/jsx-runtime";
 
 const SyncedSliders = () => {
   const sliderForRef = useRef<Slider | null>(null);
@@ -21,70 +23,60 @@ const SyncedSliders = () => {
     setNav2(sliderNavRef.current || undefined);
   }, []);
 
+  const CustomPrevArrow = (props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLDivElement> & React.HTMLAttributes<HTMLDivElement>) => (
+    <div className="arrow arrow-up" {...props} style={{ ...props.style, display: "block", cursor: "pointer", top: "-50px", position: "absolute", left: "50%", transform: "translateX(-50%)" }}>
+      <img src={up} alt="arrow up" />
+    </div>
+  );
+
+  const CustomNextArrow = (props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLDivElement> & React.HTMLAttributes<HTMLDivElement>) => (
+    <div className="arrow arrow-down" {...props} style={{ ...props.style }}>
+      <img src={down} alt="arrow down" />
+    </div>
+  );
+
   const settingsFor = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
     fade: true,
     asNavFor: nav2,
   };
 
   const settingsNav = {
-    slidesToShow: 4,
+    slidesToShow: 6,
     slidesToScroll: 1,
     asNavFor: nav1,
     dots: false,
     centerMode: true,
     focusOnSelect: true,
+    vertical: true,
+    arrows: true,
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "row-reverse", alignItems: "center", gap: "20px", maxWidth: "1000px" }}>
+    <div style={{ display: "flex", flexDirection: "row-reverse", alignItems: "center", gap: "50px" }}>
       {/* Main Slider */}
-      <div style={{width: "400px", marginRight: "20px" }}>
+      <div style={{ width: "700px", height: "700px" }}>
         <Slider {...settingsFor} ref={sliderForRef}>
-          <div>
-            <img src={photo1} alt="Слайд 1" style={{ width: "100%", height: "auto", borderRadius: "8px" }} />
-          </div>
-          <div>
-            <img src={photo2} alt="Слайд 2" style={{ width: "100%", height: "auto", borderRadius: "8px" }} />
-          </div>
-          <div>
-            <img src={photo3} alt="Слайд 3" style={{ width: "100%", height: "auto", borderRadius: "8px" }} />
-          </div>
-          <div>
-            <img src={photo4} alt="Слайд 4" style={{ width: "100%", height: "auto", borderRadius: "8px" }} />
-          </div>
-          <div>
-            <img src={photo5} alt="Слайд 5" style={{ width: "100%", height: "auto", borderRadius: "8px" }} />
-          </div>
-          <div>
-            <img src={photo6} alt="Слайд 6" style={{ width: "100%", height: "auto", borderRadius: "8px" }} />
-          </div>
+          {[photo1, photo2, photo3, photo4, photo5, photo6].map((photo, index) => (
+            <div key={index}>
+              <img src={photo} alt={`Слайд ${index + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "8px" }} />
+            </div>
+          ))}
         </Slider>
       </div>
 
       {/* Thumbnail Navigation Slider */}
-      <div style={{  transform: "rotate(90deg)", width: "700px", height: "700px" }}>
+      <div style={{ width: "100px", height: "700px", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <Slider {...settingsNav} ref={sliderNavRef}>
-          <div>
-            <img src={photo1} alt="Нав 1" style={{ transform: "rotate(-90deg)", width: "80%", cursor: "pointer", borderRadius: "4px" }} />
-          </div>
-          <div>
-            <img src={photo2} alt="Нав 2" style={{ transform: "rotate(-90deg)", width: "80%", cursor: "pointer", borderRadius: "4px" }} />
-          </div>
-          <div>
-            <img src={photo3} alt="Нав 3" style={{ transform: "rotate(-90deg)", width: "80%", cursor: "pointer", borderRadius: "4px" }} />
-          </div>
-          <div>
-            <img src={photo4} alt="Нав 4" style={{ transform: "rotate(-90deg)", width: "80%", cursor: "pointer", borderRadius: "4px" }} />
-          </div>
-          <div>
-            <img src={photo5} alt="Нав 5" style={{ transform: "rotate(-90deg)", width: "80%", cursor: "pointer", borderRadius: "4px" }} />
-          </div>
-          <div>
-            <img src={photo6} alt="Нав 6" style={{ transform: "rotate(-90deg)", width: "80%", cursor: "pointer", borderRadius: "4px" }} />
-          </div>
+          {[photo1, photo2, photo3, photo4, photo5, photo6].map((photo, index) => (
+            <div key={index} style={{ display: "flex", justifyContent: "center" }}>
+              <img src={photo} alt={`Нав ${index + 1}`} style={{ width: "80%", cursor: "pointer", borderRadius: "4px", transform: "rotate(-90deg)" }} />
+            </div>
+          ))}
         </Slider>
       </div>
     </div>
@@ -92,7 +84,6 @@ const SyncedSliders = () => {
 };
 
 export default SyncedSliders;
-
 
 
 // import React, { useRef, useEffect, useState } from "react";
