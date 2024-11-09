@@ -1,11 +1,23 @@
 // @import "../utils/normalize.scss";
 
 @font-face {
-    font-family: "Exo";
-    src: url("../utils/fonts/exo/Exo2-Black.ttf");
+    font-family: "Exo-bold"; // 700
+    src: url("../utils/fonts/exo/Exo2-Bold.ttf");
 }
 
-$exo: "Exo", serif;
+@font-face {
+    font-family: "Exo-normal"; // 400
+    src: url("../utils/fonts/exo/Exo2-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Exo-semi-bold"; // 500
+    src: url("../utils/fonts/exo/Exo2-SemiBold.ttf");
+}
+
+$exo_bold: "Exo-bold", serif;
+$exo_normal: "Exo-normal", serif;
+$exo_semi-bold: "Exo-semi-bold", serif;
 
 .container {
     padding-inline: 240px;
@@ -176,12 +188,12 @@ $exo: "Exo", serif;
     flex-direction: column;
     justify-content: center;
     gap: 80px;
-    max-width: 580px;
 
     &_top {
         display: flex;
         flex-direction: row;
         gap: 40px;
+        margin-bottom: 114px;
     }
 }
 
@@ -260,13 +272,14 @@ $exo: "Exo", serif;
 .second_info {
     display: flex;
     flex-direction: column;
+    max-width: 580px;
 
     h2 {
         font-size: 32px;
         font-weight: 700;
         line-height: 48px;
         margin-bottom: 10px;
-        font-family: $exo;
+        font-family: $exo-bold;
     }
 }
 
@@ -281,7 +294,7 @@ $exo: "Exo", serif;
         font-size: 16px;
         font-weight: 400;
         color: #00A046;
-        font-family: $exo;
+        font-family: $exo-normal;
     }
 
     > :nth-last-child(1) {
@@ -381,7 +394,7 @@ $exo: "Exo", serif;
         font-size: 20px;
         font-weight: 500;
         color: #171717;
-        font-family: $exo;
+        font-family: $exo-semi-bold;
     }
 }
 

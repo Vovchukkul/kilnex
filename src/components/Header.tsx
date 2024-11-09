@@ -7,8 +7,8 @@ export const Header = () => {
     return (
         <header className='header container'>
             <div className="header_logo">
-                <img className='header_logo_img' src={logo} alt="logo1" />
-                <img className='header_logo_text' src={logo_text} alt="logo2" />
+                <a href="/"><img className='header_logo_img' src={logo} alt="logo1" /></a>
+                <a href="/"><img className='header_logo_text' src={logo_text} alt="logo2" /></a>
             </div>
 
             <nav>

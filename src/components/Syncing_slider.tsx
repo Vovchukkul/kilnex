@@ -20,7 +20,7 @@ const SyncedSliders = () => {
 
   const [isClickedPrev, setIsClickedPrev] = useState(false);
   const [isClickedNext, setIsClickedNext] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0); // Track current active slide index
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleClickPrev = () => {
     setIsClickedNext(false);
@@ -67,7 +67,7 @@ const SyncedSliders = () => {
     arrows: false,
     fade: true,
     asNavFor: nav2,
-    beforeChange: (oldIndex: any, newIndex: React.SetStateAction<number>) => setCurrentIndex(newIndex), // Update current index on slide change
+    beforeChange: (oldIndex: any, newIndex: React.SetStateAction<number>) => setCurrentIndex(newIndex),
   };
 
   const settingsNav = {
@@ -85,7 +85,6 @@ const SyncedSliders = () => {
 
   return (
     <div style={{ display: "flex", flexDirection: "row-reverse", alignItems: "center", gap: "50px" }}>
-      {/* Main Slider */}
       <div style={{ width: "700px", height: "700px" }}>
         <Slider {...settingsFor} ref={sliderForRef}>
           {[photo1, photo2, photo3, photo4, photo5, photo6].map((photo, index) => (
@@ -100,7 +99,6 @@ const SyncedSliders = () => {
         </Slider>
       </div>
 
-      {/* Thumbnail Navigation Slider */}
       <div style={{ width: "100px", height: "700px", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <Slider {...settingsNav} ref={sliderNavRef}>
           {[photo1, photo2, photo3, photo4, photo5, photo6].map((photo, index) => (
@@ -112,7 +110,7 @@ const SyncedSliders = () => {
                   width: "80%",
                   cursor: "pointer",
                   borderRadius: "4px",
-                  border: currentIndex === index ? "1px solid #EB7D01" : "none", // Conditional border color for active thumbnail
+                  border: currentIndex === index ? "1px solid #EB7D01" : "none", 
                 }}
               />
             </div>
@@ -124,66 +122,3 @@ const SyncedSliders = () => {
 };
 
 export default SyncedSliders;
-
-
-
-// import React, { useRef, useEffect, useState } from "react";
-// import Slider from "react-slick";
-// import photo1 from "../assets/logo.svg";
-// import photo2 from "../assets/logo.svg";
-// import photo3 from "../assets/logo.svg";
-// import photo4 from "../assets/logo.svg";
-
-// const SyncedSliders = () => {
-//   // Инициализация useRef с начальным значением null
-//   const sliderForRef = useRef<Slider | null>(null);
-//   const sliderNavRef = useRef<Slider | null>(null);
-
-//   const [nav1, setNav1] = useState<Slider | undefined>(undefined);
-//   const [nav2, setNav2] = useState<Slider | undefined>(undefined);
-
-//   useEffect(() => {
-//     setNav1(sliderForRef.current || undefined); // Заменяем null на undefined
-//     setNav2(sliderNavRef.current || undefined); // Заменяем null на undefined
-//   }, []);
-
-//   const settingsFor = {
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: true,
-//     fade: true,
-//     asNavFor: nav2, // Используем состояние nav2
-//   };
-
-//   const settingsNav = {
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     asNavFor: nav1, // Используем состояние nav1
-//     dots: true,
-//     centerMode: true,
-//     focusOnSelect: true,
-//   };
-
-//   return (
-//     <div>
-//       {/* Основной слайдер */}
-//       <Slider {...settingsFor} ref={sliderForRef}>
-//         <div><img src={photo1} alt="Слайд 1" /></div>
-//         <div><img src={photo2} alt="Слайд 2" /></div>
-//         <div><img src={photo3} alt="Слайд 3" /></div>
-//         <div><img src={photo4} alt="Слайд 4" /></div>
-//       </Slider>
-
-//       {/* Слайдер навигации */}
-//       <Slider {...settingsNav} ref={sliderNavRef}>
-//         <div><img src={photo1} alt="Нав 1" /></div>
-//         <div><img src={photo2} alt="Нав 2" /></div>
-//         <div><img src={photo3} alt="Нав 3" /></div>
-//         <div><img src={photo4} alt="Нав 4" /></div>
-//       </Slider>
-//     </div>
-//   );
-// };
-
-// export default SyncedSliders;
-
