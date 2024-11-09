@@ -197,7 +197,6 @@ $exo: "Exo", serif;
 .slick-prev {
     img {
         position: relative;
-        // top: 10px;
     }
 }
 
@@ -435,4 +434,12 @@ $exo: "Exo", serif;
     color: #FFFFFF;
     opacity: 50%;
     margin-bottom: 50px;
+}
+
+.down {
+    transform: rotate(180deg);
+}
+
+.clicked {
+    filter: brightness(0) invert(1);
 }

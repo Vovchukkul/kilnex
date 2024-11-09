@@ -1,8 +1,8 @@
 import '../styles/index.scss'
 import '../styles/main.scss'
 import SyncedSliders from './Syncing_slider'
-import button from '../assets/button2.svg';
 import shield from '../assets/icons/shield-tick.svg';
+import { ShopButton } from './ShopButton';
 
 export const Second = () => {
     return (
@@ -48,10 +48,11 @@ export const Second = () => {
                 <li>IPX8 waterproof</li>
               </ul>
               <p className="second_desr">Read full description</p>
-              <button className='adv_btn'>
+              {/* <button className='adv_btn'>
                   <span>SHOP NOW</span>
                   <img className='adv_img' src={button} alt="button" />
-              </button>
+              </button> */}
+              <ShopButton />
             </div>
           </div>
           <div className="second_bottom">

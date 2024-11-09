@@ -1,7 +1,7 @@
 import '../styles/index.scss'
 import '../styles/main.scss'
-import button from '../assets/button2.svg';
 import com2 from '../assets/commutator.svg';
+import { ShopButton } from './ShopButton';
 
 export const Adv = () => {
     return (
@@ -19,10 +19,11 @@ export const Adv = () => {
                             </div>
                         </div>
                     </div>
-                    <button className='adv_btn'>
+                    {/* <button className='adv_btn'>
                         <span>SHOP NOW</span>
                         <img className='adv_img' src={button} alt="button" />
-                    </button>
+                    </button> */}
+                    <ShopButton />
                 </div>
             </section>
             <img className='com_second' src={com2} alt="commutator" />
