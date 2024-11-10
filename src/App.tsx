@@ -4,6 +4,8 @@ import { Second } from "./components/Second";
 import './utils/normalize.scss';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import { Third } from "./components/Third";
+import { Forth } from "./components/Forth";
 
 function App() {
   return (
@@ -17,68 +19,9 @@ function App() {
 
         <Second />
 
-        <section className='third'>
-          <h2>Reviews</h2>
-          <div className="third_top">
-            <div className="third_left">
-              <p>4.9</p>
-              <div className="stars">
-                <div className="star"></div>
-                <div className="star"></div>
-                <div className="star"></div>
-                <div className="star"></div>
-                <div className="star"></div>
-              </div>
-              <span>Based on 9 reviews</span>
-              <a href='/'>Leave feedback</a>
-            </div>
-            <div className="third_right">
-              <div className="third_right_block">
-                <span>5 stars</span>
-                <div className="range"><span></span></div>
-                <span>8</span>
-              </div>
-              <div className="third_right_block">
-                <span>4 stars</span>
-                <div className="range"><span></span></div>
-                <span>1</span>
-              </div>
-              <div className="third_right_block">
-                <span>3 stars</span>
-                <div className="range"><span></span></div>
-                <span>0</span>
-              </div>
-              <div className="third_right_block">
-                <span>2 stars</span>
-                <div className="range"><span></span></div>
-                <span>0</span>
-              </div>
-              <div className="third_right_block">
-                <span>1 stars</span>
-                <div className="range"><span></span></div>
-                <span>0</span>
-              </div>
-            </div>
-          </div>
-          <div className="third_bottom">
-            {/* { slider } */}
-          </div>
-        </section>
+        <Third />
 
-        <section className='forth'>
-          <h2>KilNex Smile LX02</h2>
-          <div className="forth_wrap">
-            <p>
-              Being accustomed to the darkness, a person can navigate in space under starlight, but this ability is lost if white light is turned on. At the same time, the lighting is of sufficient quality, the beam does not glare and provides a good overview.
-            </p>
-            <ul>
-              <li>Neutral light, close to 4200K sunlight.</li>
-              <li>Tilt control provides up to 180° adjustment.</li>
-              <li>Tempered TIR lens for comfortable diffused light and durability.</li>
-            </ul>
-            <button>SHOP NOW</button>
-          </div>
-        </section>
+        <Forth />
 
         <section className='fives'>
           {/* { video } */}
