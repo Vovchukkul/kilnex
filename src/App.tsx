@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Third } from "./components/Third";
 import { Forth } from "./components/Forth";
+import { Fiveth } from "./components/Fiveth";
+import { Six } from "./components/Six";
 
 function App() {
   return (
@@ -23,77 +25,9 @@ function App() {
 
         <Forth />
 
-        <section className='fives'>
-          {/* { video } */}
-          <img src="" alt="preview" />
-          <button>
-            <img src="" alt="youtube" />
-          </button>
-        </section>
+        <Fiveth />
 
-        <section className='six'>
-          <article className="six_f">
-            <div className="six_f_wrap">
-              <h3>SCOPE OF APPLICATION KilNex Smile LX02</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus. Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus.
-              </p>
-              <ul>
-                <li>Specifically designed for military, outdoor activities, fishing, hunting, mountaineering, camping.</li>
-                <li>CREE XP-G3N LEDs provide maximum powerful diffused illumination of up to 1100 lumens.</li>
-                <li>The red light LED provides maximum diffuse illumination of up to 140 lumens.</li>
-                <li>The red light is invisible to animals, fish and mosquitoes. Does not blind your neighbor's eyes, convenient for night vision.Effective in fog.</li>
-              </ul>
-            </div>
-            <img src="" alt="photo" />
-          </article>
-          <article className="six_s">
-            <div className="six_s_wrap">
-              <h3>SCOPE OF DELIVERY KilNex Smile LX02</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus. Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus.
-              </p>
-              <ul>
-                <li>Neutral light, close to 4200K sunlight.</li>
-                <li>Tilt control provides up to 180° adjustment.</li>
-                <li>Tempered TIR lens for comfortable diffused light and durability.</li>
-                <li>High precision digital optics technology for maximum reflector performance.</li>
-              </ul>
-            </div>
-            <img src="" alt="photo" />
-          </article>
-          <article className="six_t">
-            <div className="six_t_wrap">
-              <h3>SCOPE OF APPLICATION KilNex Smile LX02</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus. Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus.
-              </p>
-              <ul>
-                <li>Maximum white light beam distance of up to 110m.</li>
-                <li>Maximum red light beam distance up to 42 m.</li>
-                <li>Intelligent battery charging circuit (via microUSB charging port), cable included.</li>
-                <li>Advanced temperature control technology.</li>
-              </ul>
-            </div>
-            <img src="" alt="photo" />
-          </article>
-          <article className="six_f">
-            <div className="six_f_wrap">
-              <h3>SCOPE OF DELIVERY KilNex Smile LX02</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus. Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus.
-              </p>
-              <ul>
-                <li>Strong magnetic mount (for mounting on any metal surface).</li>
-                <li>Shock resistance up to 2 meters.</li>
-                <li>Matte anodized finish for comfortable grip with wet hands.</li>
-                <li>Protection against accidental button presses.</li>
-              </ul>
-            </div>
-            <img src="" alt="photo" />
-          </article>
-          <button>SHOP NOW</button>
-        </section>
+        <Six />
 
         <section className='seven'>
           <h2>Additional products</h2>
