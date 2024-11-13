@@ -2,6 +2,22 @@
 @import "../utils/mixins.scss";
 
 body {
+    @include onBigTablet {
+        zoom: 0.44;
+    }
+
+    @include onExtendedTablet {
+        zoom: 0.5;
+    }
+
+    @include onBigDesktop {
+        zoom: 0.625;
+    }
+
+    @include onDesktop {
+        zoom: 0.75;
+    }
+
     @include onExtendedDesktop {
         zoom: 0.83;
     }

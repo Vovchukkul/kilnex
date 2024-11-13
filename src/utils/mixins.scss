@@ -1,59 +1,59 @@
 @mixin onMobile {
-    @media (max-width: 375px) {
+    @media (max-width: 375px) and (max-width: 400px) {
       @content;
     }
   }
   
   @mixin onLargeMobile {
-    @media (max-width: 400px) {
+    @media (max-width: 400px) and (max-width: 510px) {
       @content;
     }
   }
   
   @mixin onExtendedMobile {
-    @media (max-width: 510px) {
+    @media (max-width: 510px) and (max-width: 576px) {
       @content;
     }
   }
   
   @mixin onBigMobile {
-    @media (max-width: 576px) {
+    @media (max-width: 576px) and (max-width: 640px) {
       @content;
     }
   }
   
   @mixin onSmallTablet {
-    @media (max-width: 640px) {
+    @media (max-width: 640px) and (max-width: 768px) {
       @content;
     }
   }
   
   @mixin onTablet {
-    @media (max-width: 768px) {
+    @media (max-width: 768px) and (max-width: 854px) {
       @content;
     }
   }
   
   @mixin onBigTablet {
-    @media (max-width: 854px) {
+    @media (min-width: 854px) and (max-width: 991px) {
       @content;
     }
   }
   
   @mixin onExtendedTablet {
-    @media (max-width: 991px) {
+    @media (min-width: 991px) and (max-width: 1200px) {
       @content;
     }
   }
   
   @mixin onBigDesktop {
-    @media (max-width: 1199px) {
+    @media (min-width: 1199px) and (max-width: 1440px) {
       @content;
     }
   }
   
   @mixin onDesktop {
-    @media (max-width: 1440px) {
+    @media (min-width: 1440px) and (max-width: 1600px) {
       @content;
     }
   }
