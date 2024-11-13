@@ -1,6 +1,7 @@
 import '../styles/index.scss'
 import '../styles/main.scss'
 import Slider from "react-slick";
+import { Comment } from './Comment';
 
 export const Third = () => {
     const settings = {
@@ -60,69 +61,29 @@ export const Third = () => {
                     {/* { slider } */}
                     <Slider {...settings}>
                         <div className='third_bottom_slide'>
-                            <div className="third_bottom_comment">
-                                <div className="third_bottom_wrap">
-                                    <div className="stars">
-                                        <div className="star"></div>
-                                        <div className="star"></div>
-                                        <div className="star"></div>
-                                        <div className="star"></div>
-                                        <div className="star"></div>
-                                    </div>
-                                    <span>21.10.2023</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus.</p>
-                                <div className="third_bottom_second_wrap">
-                                    <span>Oleksandr</span>
-                                    <span>aurumbyse@gmail.com</span>
-                                </div>
-                            </div>
-                            <div className="third_bottom_comment">
-                                <div className="third_bottom_wrap">
-                                    <div className="stars">
-                                        <div className="star"></div>
-                                        <div className="star"></div>
-                                        <div className="star"></div>
-                                        <div className="star"></div>
-                                        <div className="star"></div>
-                                    </div>
-                                    <span>21.10.2023</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus.</p>
-                                <div className="third_bottom_second_wrap">
-                                    <span>Oleksandr</span>
-                                    <span>aurumbyse@gmail.com</span>
-                                </div>
-                            </div>
-                            <div className="third_bottom_comment">
-                                <div className="third_bottom_wrap">
-                                    <div className="stars">
-                                        <div className="star"></div>
-                                        <div className="star"></div>
-                                        <div className="star"></div>
-                                        <div className="star"></div>
-                                        <div className="star"></div>
-                                    </div>
-                                        <span>21.10.2023</span>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus.</p>
-                                <div className="third_bottom_second_wrap">
-                                    <span>Oleksandr</span>
-                                    <span>aurumbyse@gmail.com</span>
-                                </div>
-                            </div>
+                            <Comment />
+                            <Comment />
+                            <Comment />
                         </div>
-                        <div>
-                            <h3>2</h3>
+                        <div className='third_bottom_slide'>
+                            <Comment />
+                            <Comment />
+                            <Comment />
                         </div>
-                        <div>
-                            <h3>3</h3>
+                        <div className='third_bottom_slide'>
+                            <Comment />
+                            <Comment />
+                            <Comment />
                         </div>
-                        <div>
-                            <h3>3</h3>
+                        <div className='third_bottom_slide'>
+                            <Comment />
+                            <Comment />
+                            <Comment />
                         </div>
-                        <div>
-                            <h3>3</h3>
+                        <div className='third_bottom_slide'>
+                            <Comment />
+                            <Comment />
+                            <Comment />
                         </div>
                     </Slider>
                 </div>

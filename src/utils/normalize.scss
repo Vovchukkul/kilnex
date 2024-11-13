@@ -23,6 +23,7 @@ body {
   min-height: 100vh;
   background-color: #171717;
   overflow: hidden; 
+  display: block;
 }
 
 body::-webkit-scrollbar {
@@ -75,7 +76,7 @@ button {
 
 /* Make images scale appropriately */
 img {
-  max-width: 100%;
+  // max-width: 100%;
   height: auto;
   display: block;
 }

@@ -38,7 +38,7 @@ export const Six = () => {
                 />
                 <ShopButton />
             </section>
-            <img src={com3} alt="com3" />
+            <img src={com3} alt="com3" className='com-45' />
         </>
     )
 }

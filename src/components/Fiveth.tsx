@@ -47,7 +47,7 @@ export const Fiveth = () => {
                 <img src={cover} className={classNames('fiveth_cover', { none: isClicked })} alt="cover" />
                 <img src={y_button} className={classNames('fiveth_y_button', { none: isClicked })} onClick={handleClicked} alt="youtube button" />
             </section>
-            <img src={com3} alt="com3" />
+            <img src={com3} alt="com3" className='com-45' />
         </>
     );
 };

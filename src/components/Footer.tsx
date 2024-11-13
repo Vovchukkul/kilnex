@@ -32,14 +32,14 @@ export const Footer = () => {
                 <div className="footer_block">
                     <p>WE ARE IN SOCIAL NETWORKS:</p>
                     <ul>
-                        <li><img src={insta} alt="instagram" /></li>
-                        <li><img src={face} alt="facebook" /></li>
-                        <li><img src={youtube} alt="youtube" /></li>
+                        <li><a href="/"><img src={insta} alt="instagram" /></a></li>
+                        <li><a href="/"><img src={face} alt="facebook" /></a></li>
+                        <li><a href="/"><img src={youtube} alt="youtube" /></a></li>
                     </ul>
                 </div>
             </div>
             <div className="footer_copyright">
-                <p>2023 All right reserved. Development and improvement of QuatroIT</p>
+                <p>2023 All right reserved. Development and improvement of <span>QuatroIT</span></p>
             </div>
         </footer>
     )
