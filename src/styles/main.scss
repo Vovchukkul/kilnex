@@ -1,4 +1,15 @@
 // @import "../utils/normalize.scss";
+@import "../utils/mixins.scss";
+
+body {
+    @include onBigDesktop {
+        zoom: 0.625;
+    }
+
+    @include onFullHD {
+        zoom: 1.1;
+    }
+}
 
 @font-face {
     font-family: "Exo-bold"; // 700
@@ -21,6 +32,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
 .container {
     padding-inline: 240px;
+
+    @include onMobile {
+        padding-inline: 30px;
+    }
+
+    @include onTablet {
+        padding-inline: 70px;
+    }
+
+    @include onBigDesktop {
+        padding-inline: 150px;
+    }
 }
 
 .header {
@@ -196,6 +219,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     &_top {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         gap: 40px;
         margin-bottom: 114px;
     }
@@ -464,6 +488,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 .second_bottom {
     padding: 60px 60px;
     display: flex;
+    justify-content: center;
     gap: 60px;
 
     border: 1px solid #EB7D01;
@@ -645,6 +670,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     &_bottom {
         max-width: 1520px;
         height: 416px;
+        margin: 0 auto;
         margin-bottom: 150px;
 
         &_slide {
@@ -958,6 +984,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     }
 
     &_block {
+        align-self: center;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -965,6 +992,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         position: relative;
         border: 1px solide #EB7D01;
         background-color: #000000;
+        max-width: 1440px;
 
         img {
             width: 450px;
@@ -1098,7 +1126,6 @@ footer {
     flex-direction: row;
     gap: 146px;
     align-items: start;
-    // justify-content: space-between;
     background-color: #000000;
     padding-top: 120px;     
 
@@ -1121,7 +1148,7 @@ footer {
     flex-direction: row;
     gap: 14px;
     align-items: center;
-    padding-left: 240px;
+    // padding-left: 240px;
 
     > :nth-child(1) {
         width: 75px;

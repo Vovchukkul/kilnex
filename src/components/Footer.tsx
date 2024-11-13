@@ -9,7 +9,7 @@ import youtube from "../assets/youtube.svg"
 export const Footer = () => {
     return (
         <footer>
-            <div className="footer_wrap">
+            <div className="footer_wrap container">
                 <div className="footer_logo">
                     <img src={logo} alt="logo" />
                     <img src={logo_text} alt="logo_text" />

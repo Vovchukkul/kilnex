@@ -1,95 +1,95 @@
 @mixin onMobile {
-    @media (min-width: 375px) {
+    @media (max-width: 375px) {
       @content;
     }
   }
   
   @mixin onLargeMobile {
-    @media (min-width: 400px) {
+    @media (max-width: 400px) {
       @content;
     }
   }
   
   @mixin onExtendedMobile {
-    @media (min-width: 510px) {
+    @media (max-width: 510px) {
       @content;
     }
   }
   
   @mixin onBigMobile {
-    @media (min-width: 576px) {
+    @media (max-width: 576px) {
       @content;
     }
   }
   
   @mixin onSmallTablet {
-    @media (min-width: 640px) {
+    @media (max-width: 640px) {
       @content;
     }
   }
   
   @mixin onTablet {
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
       @content;
     }
   }
   
   @mixin onBigTablet {
-    @media (min-width: 854px) {
+    @media (max-width: 854px) {
       @content;
     }
   }
   
   @mixin onExtendedTablet {
-    @media (min-width: 991px) {
+    @media (max-width: 991px) {
       @content;
     }
   }
   
   @mixin onBigDesktop {
-    @media (min-width: 1199px) {
+    @media (max-width: 1199px) {
       @content;
     }
   }
   
   @mixin onDesktop {
-    @media (min-width: 1440px) {
+    @media (max-width: 1440px) {
       @content;
     }
   }
   
   @mixin onExtendedDesktop {
-    @media (min-width: 1600px) {
+    @media (max-width: 1600px) {
       @content;
     }
   }
   
   @mixin onAverageDesktop {
-    @media (min-width: 1800px) {
+    @media (max-width: 1800px) {
       @content;
     }
   }
   
   @mixin onBiggestDesktop {
-    @media (min-width: 1912px) {
+    @media (max-width: 1912px) {
       @content;
     }
   }
   
   @mixin onBiggestScreen {
-    @media (min-width: 2000px) {
+    @media (max-width: 2000px) {
       @content;
     }
   }
   
   @mixin onBiggestScreen2 {
-    @media (min-width: 2250px) {
+    @media (max-width: 2250px) {
       @content;
     }
   }
   
   @mixin onFullHD {
-    @media (min-width: 2560px) {
+    @media (min-width: 2000px) and (max-width: 2560px) {
       @content;
     }
   }
@@ -115,7 +115,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    min-width: 296px;
+    max-width: 296px;
   
     @include onSmallTablet() {
       font-size: 32px;

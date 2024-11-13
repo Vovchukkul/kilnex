@@ -10,6 +10,7 @@ import { Fiveth } from "./components/Fiveth";
 import { Six } from "./components/Six";
 import { Seven } from "./components/Seven";
 import { Footer } from "./components/Footer";
+import "./utils/mixins.scss";
 
 function App() {
   return (
