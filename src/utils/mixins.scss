@@ -59,19 +59,19 @@
   }
   
   @mixin onExtendedDesktop {
-    @media (max-width: 1600px) {
+    @media (min-width: 1600px) and (max-width: 1800px) {
       @content;
     }
   }
   
   @mixin onAverageDesktop {
-    @media (max-width: 1800px) {
+    @media (min-width: 1800px) and (max-width: 1920px) {
       @content;
     }
   }
   
   @mixin onBiggestDesktop {
-    @media (max-width: 1912px) {
+    @media (min-width: 1912px) and (max-width: 2556px) {
       @content;
     }
   }
