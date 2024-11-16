@@ -88,6 +88,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         @include onBigMobile {
             zoom: 1.6;
         }
+
+        @include onExtendedMobile {
+            zoom: 1.5;
+        }
+
+        @include onLargeMobile {
+            zoom: 1.4;
+        }
+
+        @include onMobile {
+            zoom: 1.38;
+        }
     }
 
     img {
@@ -120,6 +132,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         }
 
         @include onBigMobile {
+            display: none;
+        }
+
+        @include onExtendedMobile {
+            display: none;
+        }
+
+        @include onLargeMobile {
+            display: none;
+        }
+
+        @include onMobile {
             display: none;
         }
     }
@@ -163,6 +187,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     @include onBigMobile {
         padding-top: 40px;
+    }
+
+    @include onExtendedMobile {
+        padding-top: 30px;
+    }
+
+    @include onLargeMobile {
+        padding-top: 20px;
+    }
+
+    @include onMobile {
+        padding-top: 20px;
     }
 
     &_left {
@@ -313,6 +349,21 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             flex-direction: column;
             margin-bottom: 30px;
         }
+
+        @include onExtendedMobile {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        @include onLargeMobile {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        @include onMobile {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
     }
 
     &_slider {
@@ -327,6 +378,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
         @include onBigMobile {
             zoom: 0.6;
+        }
+
+        @include onExtendedMobile {
+            zoom: 0.5;
+        }
+
+        @include onLargeMobile {
+            zoom: 0.5;
+        }
+
+        @include onMobile {
+            zoom: 0.5;
         }
     }
 }
@@ -428,6 +491,19 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     @include onBigMobile {
         zoom: 0.7;
         padding-left: 20px;
+    }
+
+    @include onExtendedMobile {
+        zoom: 0.6;
+        padding-left: 35px;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.6;
+    }
+
+    @include onMobile {
+        zoom: 0.6;
     }
 }
 
@@ -625,6 +701,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         zoom: 0.5;
     }
 
+    @include onExtendedMobile {
+        zoom: 0.4;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.3;
+    }
+
+    @include onMobile {
+        zoom: 0.3;
+    }
+
     &_lf {
         display: flex;
         flex-direction: column;
@@ -632,7 +720,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
         @include onTablet {
             flex-direction: row;
-        }
+        }   
 
         ul {
             display: flex;
@@ -658,7 +746,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             height: 255px;
 
             @include onBigMobile {
-                display: none   ;
+                display: none ;
             }
         }
     }
@@ -756,6 +844,24 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             gap: 40px;
             align-self: center;
         }
+
+        @include onExtendedMobile {
+            flex-direction: column;
+            gap: 40px;
+            align-self: center;
+        }
+
+        @include onLargeMobile {
+            flex-direction: column;
+            gap: 40px;
+            align-self: center;
+        }
+
+        @include onMobile {
+            flex-direction: column;
+            gap: 40px;
+            align-self: center;
+        }
     }
 
     &_left {
@@ -814,6 +920,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             zoom: 0.5;
         }
 
+        @include onExtendedMobile {
+            zoom: 0.4;
+        }
+
+        @include onLargeMobile {
+            zoom: 0.3;
+        }
+
+        @include onMobile {
+            zoom: 0.3;
+        }
+
         &_block {
             display: flex;
             flex-direction: row;
@@ -845,6 +963,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 }
 
                 @include onBigMobile {
+                    width: auto;
+                }
+
+                @include onExtendedMobile {
+                    width: auto;
+                }
+
+                @include onLargeMobile {
+                    width: auto;
+                }
+
+                @include onMobile {
                     width: auto;
                 }
             }
@@ -900,6 +1030,22 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             zoom: 0.3;
             margin-bottom: 200px;
         }
+
+        @include onExtendedMobile {
+            zoom: 0.3;
+            margin-bottom: 200px;
+        }
+
+        @include onLargeMobile {
+            zoom: 0.3;
+            margin-bottom: 240px;
+        }
+
+        @include onMobile {
+            zoom: 0.3;
+            margin-bottom: 240px;
+        }
+
 
         &_slide {
             max-width: 1440px;
@@ -1025,6 +1171,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     @include onBigMobile {
         margin-bottom: 30px;
     }
+
+    @include onExtendedMobile {
+        margin-bottom: 20px;
+    }
+
+    @include onLargeMobile {
+        margin-bottom: 20px;
+    }
+
+    @include onMobile {
+        margin-bottom: 20px;
+    }
 }
 
 .forth {
@@ -1051,6 +1209,24 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     }
 
     @include onBigMobile {
+        zoom: 0.5;
+        padding-left: 70px;
+        margin-top: -35px;
+    }
+
+    @include onExtendedMobile {
+        zoom: 0.5;
+        padding-left: 70px;
+        margin-top: -35px;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.5;
+        padding-left: 70px;
+        margin-top: -20px;
+    }
+
+    @include onMobile {
         zoom: 0.5;
         padding-left: 70px;
         margin-top: -35px;
@@ -1130,6 +1306,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         zoom: 0.35;
     }
 
+    @include onExtendedMobile {
+        zoom: 0.3;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.2;
+    }
+
+    @include onMobile {
+        zoom: 0.2;
+    }
+
     &_video {
         height: 700px;
         width: 1440px;
@@ -1157,6 +1345,24 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         }
 
         @include onBigMobile {
+            width: 1560px;
+            height: 900px;
+            top: -75px;
+        }
+
+        @include onExtendedMobile {
+            width: 1560px;
+            height: 900px;
+            top: -75px;
+        }
+
+        @include onLargeMobile {
+            width: 1560px;
+            height: 900px;
+            top: -75px;
+        }
+
+        @include onMobile {
             width: 1560px;
             height: 900px;
             top: -75px;
@@ -1216,6 +1422,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         zoom: 0.4;
     }
 
+    @include onExtendedMobile {
+        zoom: 0.4;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.3;
+    }
+
+    @include onMobile {
+        zoom: 0.3;
+    }
+
     > :nth-child(even) {
         flex-direction: row-reverse !important;
     }
@@ -1227,6 +1445,13 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         align-items: center;
         gap: 70px;
 
+        @include onLargeMobile {
+            flex-direction: column !important;
+        }
+
+        @include onMobile {
+            flex-direction: column !important;
+        }
 
         &_wrap {
             display: flex;
@@ -1293,6 +1518,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 width: 400px;
                 height: 400px;
             }
+
+            @include onExtendedMobile {
+                width: 400px;
+                height: 400px;
+            }
         }
     }
 
@@ -1318,6 +1548,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     @include onBigMobile {
         zoom: 0.4;
+    }
+
+    @include onExtendedMobile {
+        zoom: 0.36;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.3;
+    }
+
+    @include onMobile {
+        zoom: 0.3;
     }
 
     h2 {
@@ -1349,6 +1591,21 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             align-self: auto;
         }
 
+        @include onExtendedMobile {
+            flex-direction: column;
+            align-self: auto;
+        }
+
+        @include onLargeMobile {
+            flex-direction: column;
+            align-self: auto;
+        }
+
+        @include onMobile {
+            flex-direction: column;
+            align-self: auto;
+        }
+
         img {
             width: 450px;
             height: 450px;
@@ -1371,6 +1628,24 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             }
 
             @include onBigMobile {
+                position: absolute;
+                left: 90%;
+                font-size: 20px;
+            }
+
+            @include onExtendedMobile {
+                position: absolute;
+                left: 90%;
+                font-size: 20px;
+            }
+
+            @include onLargeMobile {
+                position: absolute;
+                left: 90%;
+                font-size: 20px;
+            }
+
+            @include onMobile {
                 position: absolute;
                 left: 90%;
                 font-size: 20px;
@@ -1417,6 +1692,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         }
 
         @include onBigMobile {
+            align-self: center;
+        }
+
+        @include onExtendedMobile {
+            align-self: center;
+        }
+
+        @include onLargeMobile {
+            align-self: center;
+        }
+
+        @include onMobile {
             align-self: center;
         }
 
@@ -1507,6 +1794,18 @@ footer {
     @include onBigMobile {
         zoom: 0.6;
     }
+
+    @include onExtendedMobile {
+        zoom: 0.5;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.6;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.6;
+    }
 }
 
 .footer_wrap {
@@ -1526,6 +1825,22 @@ footer {
         flex-direction: column;
         gap: 60px;
     }
+
+    @include onExtendedMobile {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    @include onLargeMobile {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    @include onMobile {
+        flex-direction: column;
+        gap: 60px;
+    }
+
 
     ul {
         display: flex;
@@ -1624,6 +1939,18 @@ footer {
 
     @include onBigMobile {
         margin-top: -20px;
+    }
+
+    @include onExtendedMobile {
+        margin-top: -15px;
+    }
+
+    @include onLargeMobile {
+        margin-top: -15px;
+    }
+
+    @include onMobile {
+        margin-top: -15px;
     }
 }
 
