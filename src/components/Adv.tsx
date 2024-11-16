@@ -19,10 +19,6 @@ export const Adv = () => {
                             </div>
                         </div>
                     </div>
-                    {/* <button className='adv_btn'>
-                        <span>SHOP NOW</span>
-                        <img className='adv_img' src={button} alt="button" />
-                    </button> */}
                     <ShopButton />
                 </div>
             </section>

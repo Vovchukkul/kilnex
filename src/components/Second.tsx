@@ -20,7 +20,9 @@ export const Second = () => {
           <section className='second container'>
             <div className="second_top">
               {/* { slider } */}
-              <SyncedSliders />
+              <div className="second_slider">
+                <SyncedSliders />
+              </div>
               <div className="second_info">
                 <h2>HEAD FLASHLIGHT WITH EXTRA POWERFUL RED LIGHT SMILE LX02</h2>
                 <div className="second_subblock">

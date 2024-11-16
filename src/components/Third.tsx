@@ -30,31 +30,31 @@ export const Third = () => {
                     <a href='/'>Leave feedback</a>
                     </div>
                     <div className="third_right">
-                    <div className="third_right_block">
-                        <span>5 stars</span>
-                        <div className="range"><div></div></div>
-                        <span>8</span>
-                    </div>
-                    <div className="third_right_block">
-                        <span>4 stars</span>
-                        <div className="range"><div></div></div>
-                        <span>1</span>
-                    </div>
-                    <div className="third_right_block">
-                        <span>3 stars</span>
-                        <div className="range"><div></div></div>
-                        <span>0</span>
-                    </div>
-                    <div className="third_right_block">
-                        <span>2 stars</span>
-                        <div className="range"><div></div></div>
-                        <span>0</span>
-                    </div>
-                    <div className="third_right_block">
-                        <span>1 stars</span>
-                        <div className="range"><div></div></div>
-                        <span>0</span>
-                    </div>
+                        <div className="third_right_block">
+                            <span>5 stars</span>
+                            <div className="range"><div></div></div>
+                            <span>8</span>
+                        </div>
+                        <div className="third_right_block">
+                            <span>4 stars</span>
+                            <div className="range"><div></div></div>
+                            <span>1</span>
+                        </div>
+                        <div className="third_right_block">
+                            <span>3 stars</span>
+                            <div className="range"><div></div></div>
+                            <span>0</span>
+                        </div>
+                        <div className="third_right_block">
+                            <span>2 stars</span>
+                            <div className="range"><div></div></div>
+                            <span>0</span>
+                        </div>
+                        <div className="third_right_block">
+                            <span>1 stars</span>
+                            <div className="range"><div></div></div>
+                            <span>0</span>
+                        </div>
                     </div>
                 </div>
                 <div className="third_bottom">

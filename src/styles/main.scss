@@ -76,6 +76,20 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     &_logo {
         display: flex;
         gap: 14px;
+
+        @include onTablet {
+            zoom: 1.4;
+        }
+    }
+
+    img {
+        height: 54px;
+        width: 54px;
+        cursor: pointer;
+
+        @include onBigTablet {
+            display: none;
+        }
     }
 
     &_logo_img {
@@ -86,6 +100,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     &_logo_text {
         width: 149px;
         height: 56px;
+    }
+
+    nav {
+        @include onTablet {
+            display: none;
+        }
     }
 
     nav ul {
@@ -117,6 +137,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     height: 850px;
     padding-top: 170px;
 
+    @include onTablet {
+        padding-top: 60px;
+    }
+
     &_left {
         display: flex;
         flex-direction: column;
@@ -127,6 +151,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             font-weight: 700;
             font-size: 46px;
             margin-bottom: 24px;
+
+            @include onTablet {
+                zoom: 0.8;
+                max-width: 700px;
+            }
         }
     }
 
@@ -242,6 +271,17 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         justify-content: center;
         gap: 40px;
         margin-bottom: 114px;
+
+        @include onTablet {
+            flex-direction: column;
+        }
+    }
+
+    &_slider {
+        @include onTablet {
+            zoom: 0.74;
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -295,6 +335,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     height: 700px !important;
     display: flex;
     gap: 20px;
+
+    // @include onTablet {
+    //     height: 1200px !important;
+    // }
 }
 
 .slick-prev {
@@ -510,19 +554,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     display: flex;
     justify-content: center;
     gap: 60px;
-
     border: 1px solid #EB7D01;
+
+    @include onTablet {
+        flex-direction: column;
+    }
 
     &_lf {
         display: flex;
         flex-direction: column;
         gap: 148px;
 
+        @include onTablet {
+            flex-direction: row;
+        }
+
         ul {
             display: flex;
             flex-direction: column;
             gap: 40px;
             width: 255px;
+
+            @include onTablet {
+                gap: 50px;
+            }
 
             li {
                 font-size: 20px;
@@ -573,6 +628,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     height: 583px;
     background-color: #EB7D01;
     display: block;
+
+    @include onTablet {
+        height: 1px;
+        width: 100%;
+    }
 }
 
 .com3 {
@@ -584,6 +644,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     display: flex;
     flex-direction: column;
     align-items: start;
+
+    // @include onTablet {
+    //     align-items: center;
+    // }
 
     h2 {
         font-size: 32px;
@@ -600,6 +664,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         align-self: flex-end;
         align-items: center;
         margin-bottom: 70px;
+
+        @include onTablet {
+            flex-direction: column;
+            gap: 100px;
+            align-self: center;
+        }
     }
 
     &_left {
@@ -640,12 +710,23 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         flex-direction: column;
         align-items: start;
         gap: 24px;
+        align-self: center;
+
+        @include onTablet {
+            zoom: 0.7;
+            align-items: center;
+            align-self: center;
+        }
 
         &_block {
             display: flex;
             flex-direction: row;
             gap: 16px;
             align-items: center;
+
+            @include onTablet {
+                justify-content: center;
+            }
 
             span {
                 font-size: 20px;
@@ -654,6 +735,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 font-family: $exo_semi-bold;
                 height: 33px;
                 width: 69px;
+
+                @include onTablet {
+                    width: auto;
+                }
             }
 
             .range {
@@ -693,11 +778,21 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         margin: 0 auto;
         margin-bottom: 150px;
 
+        @include onTablet {
+            zoom: 0.45;
+            display: flex;
+            // height: 2000px;
+        }
+
         &_slide {
             max-width: 1440px;
             display: flex !important;
             flex-direction: row;
             gap: 21px;
+
+            // @include onTablet {
+            //     flex-direction: column;
+            // }
         }
 
         &_comment {
@@ -767,6 +862,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     position: relative;
     top: 400px;
 
+    @include onTablet {
+        display: flex;
+        left: 650px;
+    }
+
     li button {
         height: 8px !important;
         width: 8px !important;
@@ -796,6 +896,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 .com5 {
     margin-top: -60px;
     margin-bottom: 150px;
+
+    @include onTablet {
+        margin-bottom: 60px;
+    }
 }
 
 .forth {
@@ -806,6 +910,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     margin-top: -60px;
     padding-top: 150px;
     padding-left: 240px;
+
+    @include onTablet {
+        zoom: 0.6;
+        height: 800px;
+        padding-left: 120px;
+        margin-top: -40px;
+        // margin-bottom: ;
+    }
 
     h2 {
         font-size: 46px;
@@ -867,6 +979,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     z-index: 1;
     position: relative;
 
+    @include onTablet {
+        zoom: 0.45;
+        padding-top: 60px;
+    }
+
     &_video {
         height: 700px;
         width: 1440px;
@@ -880,6 +997,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         z-index: 1000;
         position: relative;
         top: -59px;
+
+        @include onTablet {
+            width: 1560px;
+            height: 900px;
+            top: -75px;
+        }
     }
 
     &_y_button {
@@ -890,6 +1013,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         position: absolute;
         cursor: pointer;
         top: 42%;
+
+        @include onTablet {
+            top: 38%;
+        }
     }
 }
 
@@ -914,6 +1041,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     padding-top: 100px;
     padding-bottom: 100px;
 
+    @include onTablet {
+        zoom: 0.55;
+    }
+
     > :nth-child(even) {
         flex-direction: row-reverse !important;
     }
@@ -924,6 +1055,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         justify-content: space-between;
         align-items: center;
         gap: 70px;
+
+        // @include onTablet {
+        //     flex-direction: column;
+        // }
 
         &_wrap {
             display: flex;
@@ -994,6 +1129,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     flex-direction: column;
     padding-top: 150px;
     padding-bottom: 150px;
+
+    @include onTablet {
+        zoom: 0.5;
+    }
 
     h2 {
         font-size: 32px;
@@ -1139,6 +1278,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
 footer {
     background-color: #000000;
+
+    @include onTablet {
+        zoom: 0.5;
+    }
 }
 
 .footer_wrap {
@@ -1233,6 +1376,12 @@ footer {
 .com-45 {
     width: 100%;
     max-width: none;
+}
+
+.com5 {
+    @include onTablet {
+        margin-top: -25px;
+    }
 }
 
 .comment_wrap {

@@ -2,6 +2,7 @@ import '../styles/index.scss'
 import '../styles/main.scss'
 import logo from '../assets/logo.svg';
 import logo_text from '../assets/logo_text.svg';
+import burger from "../assets/icons/burger.svg"
 
 export const Header = () => {
     return (
@@ -10,6 +11,8 @@ export const Header = () => {
                 <a href="/"><img className='header_logo_img' src={logo} alt="logo1" /></a>
                 <a href="/"><img className='header_logo_text' src={logo_text} alt="logo2" /></a>
             </div>
+
+            <img src={burger} alt="menu" />
 
             <nav>
                 <ul>
