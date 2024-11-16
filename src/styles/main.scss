@@ -80,11 +80,15 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         @include onTablet {
             zoom: 1.4;
         }
+
+        @include onSmallTablet {
+            zoom: 1.5;
+        }
     }
 
     img {
-        height: 54px;
-        width: 54px;
+        height: 44px;
+        width: 44px;
         cursor: pointer;
 
         @include onBigTablet {
@@ -104,6 +108,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     nav {
         @include onTablet {
+            display: none;
+        }
+
+        @include onSmallTablet {
             display: none;
         }
     }
@@ -138,6 +146,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     padding-top: 170px;
 
     @include onTablet {
+        padding-top: 60px;
+    }
+
+    @include onSmallTablet {
         padding-top: 60px;
     }
 
@@ -275,12 +287,21 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         @include onTablet {
             flex-direction: column;
         }
+
+        @include onSmallTablet {
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
     }
 
     &_slider {
         @include onTablet {
             zoom: 0.74;
             margin-bottom: 30px;
+        }
+
+        @include onSmallTablet {
+            zoom: 0.66;
         }
     }
 }
@@ -372,6 +393,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         line-height: 48px;
         margin-bottom: 10px;
         font-family: $exo-bold;
+    }
+
+    @include onSmallTablet {
+        zoom: 0.8;  
+        padding-left: 30px;
     }
 }
 
@@ -560,6 +586,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         flex-direction: column;
     }
 
+    @include onSmallTablet {
+        zoom: 0.7;
+        padding: 30px 30px;
+    }
+
     &_lf {
         display: flex;
         flex-direction: column;
@@ -670,6 +701,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             gap: 100px;
             align-self: center;
         }
+
+        @include onSmallTablet {
+            flex-direction: column;
+            gap: 40px;
+            align-self: center;
+        }
     }
 
     &_left {
@@ -718,6 +755,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             align-self: center;
         }
 
+        @include onSmallTablet {
+            zoom: 0.6;
+            align-items: center;
+            align-self: center;
+        }
+
         &_block {
             display: flex;
             flex-direction: row;
@@ -725,6 +768,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             align-items: center;
 
             @include onTablet {
+                justify-content: center;
+            }
+
+            @include onSmallTablet {
                 justify-content: center;
             }
 
@@ -737,6 +784,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 width: 69px;
 
                 @include onTablet {
+                    width: auto;
+                }
+
+                @include onSmallTablet {
                     width: auto;
                 }
             }
@@ -782,6 +833,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             zoom: 0.45;
             display: flex;
             // height: 2000px;
+        }
+
+        @include onSmallTablet {
+            zoom: 0.4;
         }
 
         &_slide {
@@ -900,6 +955,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     @include onTablet {
         margin-bottom: 60px;
     }
+
+    @include onSmallTablet {
+        margin-bottom: 30px;
+    }
 }
 
 .forth {
@@ -917,6 +976,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         padding-left: 120px;
         margin-top: -40px;
         // margin-bottom: ;
+    }
+
+    @include onSmallTablet {
+        zoom: 0.6;
+        padding-left: 70px;
+        margin-top: -30px;
     }
 
     h2 {
@@ -984,6 +1049,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         padding-top: 60px;
     }
 
+    @include onSmallTablet {
+        zoom: 0.4;
+        padding-top: 60px;
+    }
+
     &_video {
         height: 700px;
         width: 1440px;
@@ -1003,6 +1073,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             height: 900px;
             top: -75px;
         }
+
+        @include onSmallTablet {
+            width: 1560px;
+            height: 900px;
+            top: -75px;
+        }
     }
 
     &_y_button {
@@ -1015,6 +1091,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         top: 42%;
 
         @include onTablet {
+            top: 38%;
+        }
+
+        @include onSmallTablet {
             top: 38%;
         }
     }
@@ -1045,6 +1125,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         zoom: 0.55;
     }
 
+    @include onSmallTablet {
+        zoom: 0.5;
+        gap: 40px;
+
+    }
+
     > :nth-child(even) {
         flex-direction: row-reverse !important;
     }
@@ -1056,9 +1142,6 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         align-items: center;
         gap: 70px;
 
-        // @include onTablet {
-        //     flex-direction: column;
-        // }
 
         &_wrap {
             display: flex;
@@ -1115,6 +1198,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         img {
             width: 710px;
             height: 710px;
+
+            @include onSmallTablet {
+                width: 400px;
+                height: 400px;
+            }
         }
     }
 
@@ -1134,6 +1222,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         zoom: 0.5;
     }
 
+    @include onSmallTablet {
+        zoom: 0.47;
+    }
+
     h2 {
         font-size: 32px;
         font-weight: 700;
@@ -1149,13 +1241,19 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         justify-content: space-between;
         gap: 50px;
         position: relative;
-        border: 1px solide #EB7D01;
+        border: 1px solid #EB7D01;
         background-color: #000000;
         max-width: 1440px;
+
+        @include onSmallTablet {
+            flex-direction: column;
+            align-self: auto;
+        }
 
         img {
             width: 450px;
             height: 450px;
+            align-self: center;
         }
 
         > :nth-last-child(1) {
@@ -1166,6 +1264,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             position: relative;
             margin-right: 50px;
             margin-top: 50px;
+
+            @include onSmallTablet {
+                position: absolute;
+                left: 90%;
+                font-size: 20px;
+            }
     
             &::before {
                 content: "";
@@ -1202,6 +1306,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         height: 100%;
         padding-top: 47px;
         padding-bottom: 47px;
+
+        @include onSmallTablet {
+            align-self: center;
+        }
 
         h3 {
             font-size: 32px;
@@ -1282,6 +1390,10 @@ footer {
     @include onTablet {
         zoom: 0.5;
     }
+
+    @include onSmallTablet {
+        zoom: 0.8;
+    }
 }
 
 .footer_wrap {
@@ -1291,6 +1403,11 @@ footer {
     align-items: start;
     background-color: #000000;
     padding-top: 120px;     
+
+    @include onSmallTablet {
+        flex-direction: column;
+        gap: 60px;
+    }
 
     ul {
         display: flex;
@@ -1381,6 +1498,10 @@ footer {
 .com5 {
     @include onTablet {
         margin-top: -25px;
+    }
+
+    @include onSmallTablet {
+        margin-top: -20px;
     }
 }
 
