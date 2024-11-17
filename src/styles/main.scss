@@ -110,6 +110,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         @include onBigTablet {
             display: none;
         }
+
+        @include onExtendedTablet {
+            display: none;
+        }
+
+        @include onBigDesktop {
+            display: none;
+        }
+
+        @include onDesktop {
+            display: none;
+        }
+
+        @include onExtendedDesktop {
+            display: none;
+        }
+
+        @include onAverageDesktop {
+            display: none;
+        }
+
+        @include onBiggestDesktop {
+            display: none;
+        }
     }
 
     &_logo_img {
