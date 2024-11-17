@@ -1,3 +1,12 @@
-<svg width="466" height="75" viewBox="0 0 466 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- <svg width="466" height="75" viewBox="0 0 466 75" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M0 0.5H237H466V36C466 47.0457 457.046 56 446 56H54.654C49.209 56 43.8213 57.1117 38.821 59.267L4.18748 74.1951C2.20718 75.0486 0 73.5965 0 71.4401V0.5Z" fill="black"/>
+</svg> -->
+<svg width="466" height="75" viewBox="0 0 466 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main Shape with White Border -->
+  <path 
+    d="M0 0.5H237H466V36C466 47.0457 457.046 56 446 56H54.654C49.209 56 43.8213 57.1117 38.821 59.267L4.18748 74.1951C2.20718 75.0486 0 73.5965 0 71.4401V0.5Z" 
+    fill="black" 
+    stroke="#EB7D01" 
+    stroke-width="3"
+  />
 </svg>

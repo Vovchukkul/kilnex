@@ -84,7 +84,7 @@ const SyncedSliders = () => {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "row-reverse", alignItems: "center", gap: "50px" }}>
+    <div className="s" style={{ display: "flex", flexDirection: "row-reverse", alignItems: "center", gap: "50px" }}>
       <div style={{ width: "700px", height: "700px" }}>
         <Slider {...settingsFor} ref={sliderForRef}>
           {[photo1, photo2, photo3, photo4, photo5, photo6].map((photo, index) => (

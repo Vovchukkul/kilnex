@@ -76,16 +76,90 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     &_logo {
         display: flex;
         gap: 14px;
+
+        @include onMobile {
+            gap: 4px;
+        }
+
+        @include onTablet {
+            zoom: 1.4;
+        }
+
+        @include onSmallTablet {
+            zoom: 1.5;
+        }
+
+        @include onBigMobile {
+            zoom: 1.6;
+        }
+
+        @include onExtendedMobile {
+            zoom: 1.5;
+        }
+
+        @include onLargeMobile {
+            zoom: 1.4;
+        }
+
+        @include onMobile {
+            zoom: 1.38;
+        }
     }
 
     &_logo_img {
         width: 75px;
         height: 72px;
+
+        @include onSmallTablet {
+            width: 40px;
+            height: 50px;
+        }
+
+        @include onMobile {
+            width: 30px;
+            height: 50px;
+        }
     }
 
     &_logo_text {
         width: 149px;
         height: 56px;
+
+        @include onSmallTablet {
+            width: 100px;
+            height: 56px;
+        }
+
+        @include onMobile {
+            width: 50px;
+            height: 56px;
+        }
+    }
+
+    nav {
+        @include onTablet {
+            display: none;
+        }
+
+        @include onSmallTablet {
+            display: none;
+        }
+
+        @include onBigMobile {
+            display: none;
+        }
+
+        @include onExtendedMobile {
+            display: none;
+        }
+
+        @include onLargeMobile {
+            display: none;
+        }
+
+        @include onMobile {
+            display: none;
+        }
     }
 
     nav ul {
@@ -117,6 +191,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     height: 850px;
     padding-top: 170px;
 
+    @include onTablet {
+        padding-top: 60px;
+    }
+
+    @include onSmallTablet {
+        padding-top: 50px;
+    }
+
+    @include onBigMobile {
+        padding-top: 40px;
+    }
+
+    @include onExtendedMobile {
+        padding-top: 30px;
+    }
+
+    @include onLargeMobile {
+        padding-top: 20px;
+    }
+
+    @include onMobile {
+        padding-top: 20px;
+    }
+
     &_left {
         display: flex;
         flex-direction: column;
@@ -127,6 +225,15 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             font-weight: 700;
             font-size: 46px;
             margin-bottom: 24px;
+
+            @include onTablet {
+                zoom: 0.8;
+                max-width: 700px;
+            }
+
+            @include onBigMobile {
+                zoom: 0.6;
+            }
         }
     }
 
@@ -242,7 +349,69 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         justify-content: center;
         gap: 40px;
         margin-bottom: 114px;
+
+        @include onTablet {
+            flex-direction: column;
+
+            > :nth-child(1) {
+                > :nth-child(1) {
+                    flex-direction: column;
+                }
+            }
+        }
+
+        @include onSmallTablet {
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+
+        @include onBigMobile {
+            flex-direction: column;
+            margin-bottom: 30px;
+        }
+
+        @include onExtendedMobile {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        @include onLargeMobile {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        @include onMobile {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
     }
+
+    // &_slider {
+    //     @include onTablet {
+    //         zoom: 0.74;
+    //         margin-bottom: 30px;
+    //     }
+
+    //     @include onSmallTablet {
+    //         zoom: 0.3;
+    //     }
+
+    //     @include onBigMobile {
+    //         zoom: 0.6;
+    //     }
+
+    //     @include onExtendedMobile {
+    //         zoom: 0.5;
+    //     }
+
+    //     @include onLargeMobile {
+    //         zoom: 0.5;
+    //     }
+
+    //     @include onMobile {
+    //         zoom: 0.5;
+    //     }
+    // }
 }
 
 // .custom-nav-slider .slick-prev,
@@ -291,11 +460,53 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     height: 768px;
 }
 
+.s {
+    @include onTablet {
+        zoom: 0.7;
+    }
+
+    @include onSmallTablet {
+        zoom: 0.6;
+    }
+}
+
+// .slick-slider {
+//     @include onTablet {
+//         width: 700px;
+//         height: 100px;
+//     }
+// }
+
+// .l {
+//     @include onTablet {
+//         display: flex;
+//         flex-direction: row !important;
+//     }
+// }
+
+// .nav {
+//     @include onTablet {
+//         width: 680px !important;
+//         height: 100px !important;
+//     }
+// }
+
 .slick-list {
     height: 700px !important;
     display: flex;
     gap: 20px;
+
+    // @include onTablet {
+    //     height: 1200px !important;
+    // }
 }
+
+// .slick-track {
+//     @include onTablet {
+//         display: flex !important;
+//         flex-direction: row !important;
+//     }
+// }
 
 .slick-prev {
     display: block;
@@ -328,6 +539,29 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         line-height: 48px;
         margin-bottom: 10px;
         font-family: $exo-bold;
+    }
+
+    @include onSmallTablet {
+        zoom: 0.8;  
+        padding-left: 30px;
+    }
+
+    @include onBigMobile {
+        zoom: 0.7;
+        padding-left: 20px;
+    }
+
+    @include onExtendedMobile {
+        zoom: 0.6;
+        padding-left: 35px;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.6;
+    }
+
+    @include onMobile {
+        zoom: 0.6;
     }
 }
 
@@ -510,19 +744,51 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     display: flex;
     justify-content: center;
     gap: 60px;
-
     border: 1px solid #EB7D01;
+
+    @include onTablet {
+        flex-direction: column;
+    }
+
+    @include onSmallTablet {
+        zoom: 0.7;
+        padding: 30px 30px;
+    }
+
+    @include onBigMobile {
+        zoom: 0.5;
+    }
+
+    @include onExtendedMobile {
+        zoom: 0.4;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.3;
+    }
+
+    @include onMobile {
+        zoom: 0.3;
+    }
 
     &_lf {
         display: flex;
         flex-direction: column;
         gap: 148px;
 
+        @include onTablet {
+            flex-direction: row;
+        }   
+
         ul {
             display: flex;
             flex-direction: column;
             gap: 40px;
             width: 255px;
+
+            @include onTablet {
+                gap: 50px;
+            }
 
             li {
                 font-size: 20px;
@@ -536,6 +802,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         img {
             width: 255px;
             height: 255px;
+
+            @include onBigMobile {
+                display: none ;
+            }
         }
     }
 
@@ -573,6 +843,16 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     height: 583px;
     background-color: #EB7D01;
     display: block;
+
+    @include onTablet {
+        height: 1px;
+        width: 100%;
+    }
+
+    // @include onBigMobile {
+    //     height: 1px;
+    //     width: 100%;
+    // }
 }
 
 .com3 {
@@ -584,6 +864,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     display: flex;
     flex-direction: column;
     align-items: start;
+
+    // @include onTablet {
+    //     align-items: center;
+    // }
 
     h2 {
         font-size: 32px;
@@ -600,6 +884,42 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         align-self: flex-end;
         align-items: center;
         margin-bottom: 70px;
+
+        @include onTablet {
+            flex-direction: column;
+            gap: 100px;
+            align-self: center;
+        }
+
+        @include onSmallTablet {
+            flex-direction: column;
+            gap: 40px;
+            align-self: center;
+        }
+
+        @include onBigMobile {
+            flex-direction: column;
+            gap: 40px;
+            align-self: center;
+        }
+
+        @include onExtendedMobile {
+            flex-direction: column;
+            gap: 40px;
+            align-self: center;
+        }
+
+        @include onLargeMobile {
+            flex-direction: column;
+            gap: 40px;
+            align-self: center;
+        }
+
+        @include onMobile {
+            flex-direction: column;
+            gap: 40px;
+            align-self: center;
+        }
     }
 
     &_left {
@@ -640,12 +960,49 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         flex-direction: column;
         align-items: start;
         gap: 24px;
+        align-self: center;
+
+        @include onTablet {
+            zoom: 0.7;
+            align-items: center;
+            align-self: center;
+        }
+
+        @include onSmallTablet {
+            zoom: 0.6;
+            align-items: center;
+            align-self: center;
+        }
+
+        @include onBigMobile {
+            zoom: 0.5;
+        }
+
+        @include onExtendedMobile {
+            zoom: 0.4;
+        }
+
+        @include onLargeMobile {
+            zoom: 0.3;
+        }
+
+        @include onMobile {
+            zoom: 0.3;
+        }
 
         &_block {
             display: flex;
             flex-direction: row;
             gap: 16px;
             align-items: center;
+
+            @include onTablet {
+                justify-content: center;
+            }
+
+            @include onSmallTablet {
+                justify-content: center;
+            }
 
             span {
                 font-size: 20px;
@@ -654,6 +1011,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 font-family: $exo_semi-bold;
                 height: 33px;
                 width: 69px;
+
+                @include onTablet {
+                    width: auto;
+                }
+
+                @include onSmallTablet {
+                    width: auto;
+                }
+
+                @include onBigMobile {
+                    width: auto;
+                }
+
+                @include onExtendedMobile {
+                    width: auto;
+                }
+
+                @include onLargeMobile {
+                    width: auto;
+                }
+
+                @include onMobile {
+                    width: auto;
+                }
             }
 
             .range {
@@ -693,11 +1074,46 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         margin: 0 auto;
         margin-bottom: 150px;
 
+        @include onTablet {
+            zoom: 0.45;
+            display: flex;
+            // height: 2000px;
+        }
+
+        @include onSmallTablet {
+            zoom: 0.4;
+        }
+
+        @include onBigMobile {
+            zoom: 0.3;
+            margin-bottom: 200px;
+        }
+
+        @include onExtendedMobile {
+            zoom: 0.3;
+            margin-bottom: 200px;
+        }
+
+        @include onLargeMobile {
+            zoom: 0.3;
+            margin-bottom: 240px;
+        }
+
+        @include onMobile {
+            zoom: 0.3;
+            margin-bottom: 240px;
+        }
+
+
         &_slide {
             max-width: 1440px;
             display: flex !important;
             flex-direction: row;
             gap: 21px;
+
+            // @include onTablet {
+            //     flex-direction: column;
+            // }
         }
 
         &_comment {
@@ -705,7 +1121,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             height: 346px;
             border: 0.5px solid #EB7D01;
             // box-shadow: 0px 0px 20px 0px #EB7D0199;
-            box-shadow: 0px -20px 20px 0px transparent, 0px 20px 0px 0px #EB7D0199;
+            // box-shadow: 0px -20px 20px 0px transparent, 0px 20px 0px 0px #EB7D0199;
             padding: 40px 20px 0;
             border-radius: 40px;
             background-color: #000000;
@@ -767,6 +1183,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     position: relative;
     top: 400px;
 
+    @include onTablet {
+        display: flex;
+        left: 650px;
+    }
+
     li button {
         height: 8px !important;
         width: 8px !important;
@@ -796,6 +1217,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 .com5 {
     margin-top: -60px;
     margin-bottom: 150px;
+
+    @include onTablet {
+        margin-bottom: 60px;
+    }
+
+    @include onSmallTablet {
+        margin-bottom: 30px;
+    }
+
+    @include onBigMobile {
+        margin-bottom: 30px;
+    }
+
+    @include onExtendedMobile {
+        margin-bottom: 20px;
+    }
+
+    @include onLargeMobile {
+        margin-bottom: 20px;
+    }
+
+    @include onMobile {
+        margin-bottom: 20px;
+    }
 }
 
 .forth {
@@ -806,6 +1251,44 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     margin-top: -60px;
     padding-top: 150px;
     padding-left: 240px;
+
+    @include onTablet {
+        zoom: 0.6;
+        height: 800px;
+        padding-left: 120px;
+        margin-top: -40px;
+        // margin-bottom: ;
+    }
+
+    @include onSmallTablet {
+        zoom: 0.6;
+        padding-left: 70px;
+        margin-top: -30px;
+    }
+
+    @include onBigMobile {
+        zoom: 0.5;
+        padding-left: 70px;
+        margin-top: -35px;
+    }
+
+    @include onExtendedMobile {
+        zoom: 0.5;
+        padding-left: 70px;
+        margin-top: -35px;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.5;
+        padding-left: 70px;
+        margin-top: -20px;
+    }
+
+    @include onMobile {
+        zoom: 0.5;
+        padding-left: 70px;
+        margin-top: -35px;
+    }
 
     h2 {
         font-size: 46px;
@@ -867,6 +1350,32 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     z-index: 1;
     position: relative;
 
+    // @include onTablet {
+    //     zoom: 0.45;
+    //     padding-top: 60px;
+    // }
+
+    // @include onSmallTablet {
+    //     zoom: 0.4;
+    //     padding-top: 60px;
+    // }
+
+    // @include onBigMobile {
+    //     zoom: 0.35;
+    // }
+
+    // @include onExtendedMobile {
+    //     zoom: 0.3;
+    // }
+
+    // @include onLargeMobile {
+    //     zoom: 0.2;
+    // }
+
+    // @include onMobile {
+    //     zoom: 0.2;
+    // }
+
     &_video {
         height: 700px;
         width: 1440px;
@@ -880,6 +1389,42 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         z-index: 1000;
         position: relative;
         top: -59px;
+
+        // @include onTablet {
+        //     width: 1560px;
+        //     height: 900px;
+        //     top: -75px;
+        // }
+
+        // @include onSmallTablet {
+        //     width: 1560px;
+        //     height: 900px;
+        //     top: -75px;
+        // }
+
+        // @include onBigMobile {
+        //     width: 1560px;
+        //     height: 900px;
+        //     top: -75px;
+        // }
+
+        // @include onExtendedMobile {
+        //     width: 1560px;
+        //     height: 900px;
+        //     top: -75px;
+        // }
+
+        // @include onLargeMobile {
+        //     width: 1560px;
+        //     height: 900px;
+        //     top: -75px;
+        // }
+
+        // @include onMobile {
+        //     width: 1560px;
+        //     height: 900px;
+        //     top: -75px;
+        // }
     }
 
     &_y_button {
@@ -890,6 +1435,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         position: absolute;
         cursor: pointer;
         top: 42%;
+
+        // @include onTablet {
+        //     top: 38%;
+        // }
+
+        // @include onSmallTablet {
+        //     top: 38%;
+        // }
     }
 }
 
@@ -914,6 +1467,31 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     padding-top: 100px;
     padding-bottom: 100px;
 
+    @include onTablet {
+        zoom: 0.55;
+    }
+
+    @include onSmallTablet {
+        zoom: 0.5;
+        gap: 40px;
+    }
+
+    @include onBigMobile {
+        zoom: 0.4;
+    }
+
+    @include onExtendedMobile {
+        zoom: 0.4;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.3;
+    }
+
+    @include onMobile {
+        zoom: 0.3;
+    }
+
     > :nth-child(even) {
         flex-direction: row-reverse !important;
     }
@@ -924,6 +1502,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         justify-content: space-between;
         align-items: center;
         gap: 70px;
+
+        @include onLargeMobile {
+            flex-direction: column !important;
+        }
+
+        @include onMobile {
+            flex-direction: column !important;
+        }
 
         &_wrap {
             display: flex;
@@ -980,6 +1566,21 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         img {
             width: 710px;
             height: 710px;
+
+            @include onSmallTablet {
+                width: 400px;
+                height: 400px;
+            }
+
+            @include onBigMobile {
+                width: 400px;
+                height: 400px;
+            }
+
+            @include onExtendedMobile {
+                width: 400px;
+                height: 400px;
+            }
         }
     }
 
@@ -994,6 +1595,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     flex-direction: column;
     padding-top: 150px;
     padding-bottom: 150px;
+
+    @include onTablet {
+        zoom: 0.5;
+    }
+
+    @include onSmallTablet {
+        zoom: 0.47;
+    }
+
+    @include onBigMobile {
+        zoom: 0.4;
+    }
+
+    @include onExtendedMobile {
+        zoom: 0.36;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.3;
+    }
+
+    @include onMobile {
+        zoom: 0.3;
+    }
 
     h2 {
         font-size: 32px;
@@ -1010,13 +1635,39 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         justify-content: space-between;
         gap: 50px;
         position: relative;
-        border: 1px solide #EB7D01;
+        border: 1px solid #EB7D01;
         background-color: #000000;
         max-width: 1440px;
+
+        @include onSmallTablet {
+            flex-direction: column;
+            align-self: auto;
+        }
+
+        @include onBigMobile {
+            flex-direction: column;
+            align-self: auto;
+        }
+
+        @include onExtendedMobile {
+            flex-direction: column;
+            align-self: auto;
+        }
+
+        @include onLargeMobile {
+            flex-direction: column;
+            align-self: auto;
+        }
+
+        @include onMobile {
+            flex-direction: column;
+            align-self: auto;
+        }
 
         img {
             width: 450px;
             height: 450px;
+            align-self: center;
         }
 
         > :nth-last-child(1) {
@@ -1027,6 +1678,36 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             position: relative;
             margin-right: 50px;
             margin-top: 50px;
+
+            @include onSmallTablet {
+                position: absolute;
+                left: 90%;
+                font-size: 20px;
+            }
+
+            @include onBigMobile {
+                position: absolute;
+                left: 90%;
+                font-size: 20px;
+            }
+
+            @include onExtendedMobile {
+                position: absolute;
+                left: 90%;
+                font-size: 20px;
+            }
+
+            @include onLargeMobile {
+                position: absolute;
+                left: 90%;
+                font-size: 20px;
+            }
+
+            @include onMobile {
+                position: absolute;
+                left: 90%;
+                font-size: 20px;
+            }
     
             &::before {
                 content: "";
@@ -1063,6 +1744,26 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         height: 100%;
         padding-top: 47px;
         padding-bottom: 47px;
+
+        @include onSmallTablet {
+            align-self: center;
+        }
+
+        @include onBigMobile {
+            align-self: center;
+        }
+
+        @include onExtendedMobile {
+            align-self: center;
+        }
+
+        @include onLargeMobile {
+            align-self: center;
+        }
+
+        @include onMobile {
+            align-self: center;
+        }
 
         h3 {
             font-size: 32px;
@@ -1139,6 +1840,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
 footer {
     background-color: #000000;
+
+    @include onTablet {
+        zoom: 0.5;
+    }
+
+    @include onSmallTablet {
+        zoom: 0.8;
+    }
+
+    @include onBigMobile {
+        zoom: 0.6;
+    }
+
+    @include onExtendedMobile {
+        zoom: 0.5;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.6;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.6;
+    }
 }
 
 .footer_wrap {
@@ -1148,6 +1873,32 @@ footer {
     align-items: start;
     background-color: #000000;
     padding-top: 120px;     
+
+    @include onSmallTablet {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    @include onBigMobile {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    @include onExtendedMobile {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    @include onLargeMobile {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    @include onMobile {
+        flex-direction: column;
+        gap: 60px;
+    }
+
 
     ul {
         display: flex;
@@ -1235,14 +1986,43 @@ footer {
     max-width: none;
 }
 
+.com5 {
+    @include onTablet {
+        margin-top: -25px;
+    }
+
+    @include onSmallTablet {
+        margin-top: -20px;
+    }
+
+    @include onBigMobile {
+        margin-top: -20px;
+    }
+
+    @include onExtendedMobile {
+        margin-top: -15px;
+    }
+
+    @include onLargeMobile {
+        margin-top: -15px;
+    }
+
+    @include onMobile {
+        margin-top: -15px;
+    }
+}
+
 .comment_wrap {
     display: flex;
     flex-direction: column;
     gap: 0;
 
     img {
-        width: 466px;
-        margin-top: -30px;
-        // border: 0.5px solid #EB7D01;
+        width: 500px !important;
+        height: 100%;
+        position: relative;
+        top: -40px;
+        left: 1px;
+        z-index: -1000;
     }
 }
