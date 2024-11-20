@@ -67,7 +67,7 @@ const SyncedSliders = () => {
     arrows: false,
     fade: true,
     asNavFor: nav2,
-    beforeChange: (oldIndex: any, newIndex: React.SetStateAction<number>) => setCurrentIndex(newIndex),
+    beforeChange: (_oldIndex: any, newIndex: React.SetStateAction<number>) => setCurrentIndex(newIndex),
   };
 
   const settingsNav = {
