@@ -300,9 +300,9 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     &_btn {
         position: relative;
-        background-image: url(../assets/shop_btn.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
+        // background-image: url(../assets/shop_btn.svg);
+        // background-repeat: no-repeat;
+        // background-size: cover;
         height: 60px;
         width: 215px;
 
@@ -1834,9 +1834,13 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     }
 }
 
-.seven_block .adv_img {
-    width: 217px;
+.adv_btn {
+    border: 3px solid #EB7D01;
 }
+
+// .seven_block .adv_img {
+//     width: 217px;
+// }
 
 footer {
     background-color: #000000;

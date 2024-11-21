@@ -6,7 +6,6 @@ export const ShopButton = () => {
     return (
         <button className='adv_btn'>
             <span>SHOP NOW</span>
-            {/* <img className='adv_img' src={shop_btn} alt="button" /> */}
         </button>
     )
 }
