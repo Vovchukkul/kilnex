@@ -1,4 +1,3 @@
-import button from '../assets/shop_btn_bot.svg';
 import '../styles/index.scss';
 import '../styles/main.scss';
 

@@ -11,7 +11,7 @@ import com3 from "../assets/com3.svg"
 export const Six = () => {
     return (
         <>
-            <section className='six container'>
+            <section className='six container' id='description'>
                 <SixBlock 
                     h3="SCOPE OF APPLICATION KilNex Smile LX02"
                     p="Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus. Lorem ipsum dolor sit amet consectetur. Egestas nulla turpis in erat consequat tellus fringilla fermentum. Nulla pellentesque tempus ornare nibh faucibus at tellus."

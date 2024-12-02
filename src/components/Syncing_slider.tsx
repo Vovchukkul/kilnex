@@ -51,13 +51,13 @@ const SyncedSliders = () => {
         transform: "translateX(-50%)",
       }}
     >
-      <img src={up} alt="arrow up" onClick={handleClickPrev} className={cn({ clicked: isClickedPrev })} />
+      <img src={up} alt="arrow up" onClick={handleClickPrev} className={cn("clicked")} />
     </div>
   );
 
   const CustomNextArrow = (props: JSX.IntrinsicAttributes & React.ClassAttributes<HTMLDivElement> & React.HTMLAttributes<HTMLDivElement>) => (
     <div className="arrow arrow-down" {...props} style={{ ...props.style }}>
-      <img src={up} className={cn("down", { clicked: isClickedNext })} onClick={handleClickNext} alt="arrow down" />
+      <img src={up} className={cn("down clicked")} onClick={handleClickNext} alt="arrow down" />
     </div>
   );
 
@@ -76,6 +76,7 @@ const SyncedSliders = () => {
     asNavFor: nav1,
     dots: false,
     centerMode: true,
+    centerPadding: "0",
     focusOnSelect: true,
     vertical: true,
     arrows: true,

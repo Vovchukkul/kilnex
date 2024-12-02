@@ -14,7 +14,7 @@ export const Third = () => {
 
     return (
         <>
-            <section className='third container'>
+            <section className='third container' id='reviews'>
                 <h2>Reviews</h2>
                 <div className="third_top">
                     <div className="third_left">
@@ -32,7 +32,8 @@ export const Third = () => {
                     <div className="third_right">
                     <div className="third_right_block">
                         <span>5 stars</span>
-                        <div className="range"><div></div></div>
+                        {/* <div className="range"></div> */}
+                        <input type="range" value="10" min="0" max="100" className="range" id="rangeInput" />
                         <span>8</span>
                     </div>
                     <div className="third_right_block">
@@ -88,7 +89,6 @@ export const Third = () => {
                     </Slider>
                 </div>
             </section>
-            <img src="" alt="" />
         </>
     )
 }

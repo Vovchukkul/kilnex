@@ -1,6 +1,10 @@
 // @import "../utils/normalize.scss";
 @import "../utils/mixins.scss";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     @include onBigTablet {
         zoom: 0.44;
@@ -173,6 +177,8 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             text-transform: uppercase;
             font-size: 20px;
             font-weight: 700;
+            color: #FFFFFF;
+            cursor: pointer;
         }
     }
 
@@ -225,6 +231,8 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             font-weight: 700;
             font-size: 46px;
             margin-bottom: 24px;
+            color: #FFFFFF;
+            font-family: $exo_bold, serif;
 
             @include onTablet {
                 zoom: 0.8;
@@ -242,6 +250,8 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         font-weight: 400;
         font-size: 24px;
         margin-bottom: 30px;
+        color: #FFFFFF;
+        font-family: $exo_normal, serif;
     }
 
     &_blocks {
@@ -256,6 +266,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         font-weight: 700;
         font-size: 96px;
         color: #FFFFFF;
+        font-family: $exo_bold ,serif;
     }
 
     &_block {
@@ -269,6 +280,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         font-size: 32px;
         font-weight: 700;
         position: relative;
+        font-family: $exo_bold ,serif;
 
         &::after {
             content: "";
@@ -306,7 +318,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         height: 60px;
         width: 215px;
 
-        transition: ease linear 0.5s;
+        // transition: ease linear 0.5s;
 
         span {
             font-weight: 500px;
@@ -314,13 +326,13 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             color: #FFFFFF;
         }
 
-        &:hover {
-            transform: scale(1.1);
+        // &:hover {
+        //     transform: scale(1.1);
             
-            span {
-                color: #FF0000;
-            }
-        }
+        //     span {
+        //         color: #FF0000;
+        //     }
+        // }
     }
 
     &_img {
@@ -385,39 +397,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             margin-bottom: 20px;
         }
     }
-
-    // &_slider {
-    //     @include onTablet {
-    //         zoom: 0.74;
-    //         margin-bottom: 30px;
-    //     }
-
-    //     @include onSmallTablet {
-    //         zoom: 0.3;
-    //     }
-
-    //     @include onBigMobile {
-    //         zoom: 0.6;
-    //     }
-
-    //     @include onExtendedMobile {
-    //         zoom: 0.5;
-    //     }
-
-    //     @include onLargeMobile {
-    //         zoom: 0.5;
-    //     }
-
-    //     @include onMobile {
-    //         zoom: 0.5;
-    //     }
-    // }
 }
-
-// .custom-nav-slider .slick-prev,
-// .custom-nav-slider .slick-next {
-//   display: none !important;
-// }
 
 .slick-arrow::before {
     display: none;
@@ -539,6 +519,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         line-height: 48px;
         margin-bottom: 10px;
         font-family: $exo-bold;
+        color: #FFFFFF;
     }
 
     @include onSmallTablet {
@@ -729,13 +710,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     color: #FFFFFF;
     opacity: 50%;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .down {
     transform: rotate(180deg);
 }
 
-.clicked {
+.clicked:hover {
     filter: brightness(0) invert(1);
 }
 
@@ -796,6 +778,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 font-family: $exo_bold;
                 text-transform: uppercase;
                 cursor: pointer;
+                color: #FFFFFF;
             }
         }
 
@@ -810,7 +793,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     }
 
     &_active {
-        color: #00A046;
+        color: #00A046 !important;
     }
 
     &_rg {
@@ -1045,27 +1028,27 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             }
         }
 
-        > :nth-child(1) {
-            .range {
-                div {
-                    width: 96%;
-                    height: 100%;
-                    border-radius: 40px;
-                    background-color: #EB7D01;
-                }
-            }
-        }
+        // > :nth-child(1) {
+        //     .range {
+        //         div {
+        //             width: 96%;
+        //             height: 100%;
+        //             border-radius: 40px;
+        //             background-color: #EB7D01;
+        //         }
+        //     }
+        // }
 
-        > :nth-child(2) {
-            .range {
-                div {
-                    width: 3%;
-                    height: 100%;
-                    border-radius: 40px;
-                    background-color: #EB7D01;
-                }
-            }
-        }
+        // > :nth-child(2) {
+        //     .range {
+        //         div {
+        //             width: 3%;
+        //             height: 100%;
+        //             border-radius: 40px;
+        //             background-color: #EB7D01;
+        //         }
+        //     }
+        // }
     }
 
     &_bottom {
@@ -1117,17 +1100,22 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         }
 
         &_comment {
-            width: 466px;
-            height: 346px;
-            border: 0.5px solid #EB7D01;
+            width: 466px !important;
+            height: 446px !important;
+            // border: 0.5px solid #EB7D01;
             // box-shadow: 0px 0px 20px 0px #EB7D0199;
             // box-shadow: 0px -20px 20px 0px transparent, 0px 20px 0px 0px #EB7D0199;
             padding: 40px 20px 0;
-            border-radius: 40px;
-            background-color: #000000;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            border-bottom: none;
+            // border-radius: 40px;
+            // background-color: #000000;
+            // border-bottom-left-radius: 0;
+            // border-bottom-right-radius: 0;
+            // border-bottom: none;
+            background-image: url("../assets/comment_svg.svg");
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            background-size: 490px 486px;
+            background-position: -10px -60px;
 
             p {
                 margin-bottom: 30px;
@@ -1844,6 +1832,16 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     background-position: center 50px;
     border-bottom: none;
+    padding-bottom: 54px;
+    padding-top: 10px;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 111px) 100%, 12px 100%, 0 calc(100% - 5px));
+
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.8; 
+        border-color: #EB7D01;
+    }
 }
 
 .wrap {
@@ -2046,4 +2044,80 @@ footer {
 .wrap {
     display: flex;
     flex-direction: column;
+}
+
+.slick-dots li.slick-active {
+    background-color: #EB7D01;
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+  }
+
+
+.slick-arrow:hover {
+    fill: #fff !important;
+}
+
+.range {
+    width: 698px;
+    height: 8px;
+    border-radius: 40px;
+    background-color: #4F4F4F;
+    appearance: none; /* Remove default browser styles */
+    outline: none;    /* Remove focus outline */
+    appearance: #EB7D01;
+}
+
+/* Style the range thumb */
+.range::-webkit-slider-thumb {
+    // appearance: none;
+    appearance: #EB7D01;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FFFFFF; /* Adjust as needed */
+    cursor: pointer;
+}
+
+.range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FFFFFF; /* Adjust as needed */
+    cursor: pointer;
+}
+
+.range::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FFFFFF; /* Adjust as needed */
+    cursor: pointer;
+}
+
+/* Optionally style the range track for WebKit browsers */
+.range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    border-radius: 40px;
+    background-color: #4F4F4F;
+}
+
+
+.range::-webkit-slider-thumb {
+    appearance: none; /* Вимкнути стандартну стилізацію */
+    width: 0;         /* Ширина 0 */
+    height: 0;        /* Висота 0 */
+}
+
+.range::-moz-range-thumb {
+    width: 0;
+    height: 0;
+    border: none;
+}
+
+.range::-ms-thumb {
+    width: 0;
+    height: 0;
+    border: none;
 }

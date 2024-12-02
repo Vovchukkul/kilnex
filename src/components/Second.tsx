@@ -7,6 +7,7 @@ import second_bottom from '../assets/second_bottom.svg'
 import { useState } from 'react';
 import classNames from 'classnames';
 import com3 from '../assets/com3.svg';
+import { Link } from 'react-scroll';
 
 export const Second = () => {
     const [currTab, setCurrTab] = useState(1)
@@ -17,7 +18,7 @@ export const Second = () => {
 
     return (
         <>
-          <section className='second container'>
+          <section className='second container' id='product'>
             <div className="second_top">
               {/* { slider } */}
               <SyncedSliders />
@@ -58,11 +59,9 @@ export const Second = () => {
                   <li>3500 mAh battery.</li>
                   <li>IPX8 waterproof</li>
                 </ul>
-                <p className="second_desr">Read full description</p>
-                {/* <button className='adv_btn'>
-                    <span>SHOP NOW</span>
-                    <img className='adv_img' src={button} alt="button" />
-                </button> */}
+                <Link to='description' smooth={true} duration={500}>
+                  <p className="second_desr">Read full description</p>
+                </Link>
                 <ShopButton />
               </div>
             </div>

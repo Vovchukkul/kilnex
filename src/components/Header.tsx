@@ -1,23 +1,32 @@
 import '../styles/index.scss'
 import '../styles/main.scss'
-import logo from '../assets/logo.svg';
-import logo_text from '../assets/logo_text.svg';
+import logo from '../assets/logo_kilnex.svg';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 export const Header = () => {
     return (
         <header className='header container'>
             <div className="header_logo">
-                <a href="/"><img className='header_logo_img' src={logo} alt="logo1" /></a>
-                <a href="/"><img className='header_logo_text' src={logo_text} alt="logo2" /></a>
+                <a href="/"><img className='header_logo' src={logo} alt="logo1" /></a>
             </div>
 
             <nav>
                 <ul>
-                    <li>PRODUCT</li>
-                    <li>REVIEWS</li>
-                    <li>VIDEO</li>
-                    <li>DESCRIPTION</li>
-                    <li>ADDITIONAL PRODUCTS</li>
+                    <Link to="product" smooth={true} duration={500}>
+                        <li>PRODUCT</li>
+                    </Link>
+                    <Link to="reviews">
+                        <li>REVIEWS</li>
+                    </Link>
+                    <Link to="video">
+                        <li>VIDEO</li>
+                    </Link>
+                    <Link to="description">
+                        <li>DESCRIPTION</li>
+                    </Link>
+                    <Link to="additional">
+                        <li>ADDITIONAL PRODUCTS</li>
+                    </Link>
                 </ul>
             </nav>
 

@@ -5,7 +5,7 @@ import seven_img from '../assets/seven_img.svg'
 
 export const Seven = () => {
     return (
-        <section className='seven container'>
+        <section className='seven container' id="additional">
           <h2>Additional products</h2>
           <div className="seven_block">
             <div className="seven_sale_block"><p>SALE</p></div>

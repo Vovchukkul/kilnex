@@ -1,6 +1,5 @@
 import "../styles/index.scss"
 import "../styles/main.scss"
-import comment_bottom from "../assets/bottom.svg"
 
 export const Comment = () => {
     return (
@@ -22,7 +21,7 @@ export const Comment = () => {
                     <span>aurumbyse@gmail.com</span>
                 </div>
             </div>
-            <img src={comment_bottom} alt="comment" />
+            {/* <img src={comment_bottom} alt="comment" /> */}
         </div>
     )   
 }
