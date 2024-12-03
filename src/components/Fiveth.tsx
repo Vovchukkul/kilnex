@@ -8,24 +8,13 @@ import com3 from '../assets/com3.svg'
 
 export const Fiveth = () => {
     const [isClicked, setIsClicked] = useState(false);
-    const iframeRef = useRef<HTMLIFrameElement | null>(null); // Ref to target the iframe
+    const [iframeSrc, setIframeSrc] = useState("https://www.youtube.com/embed/K7u5sfXfAlc");
 
     const handleClicked = () => {
         setIsClicked(true);
 
-        // // Wait a moment to let the iframe load, then trigger the button click
-        // setTimeout(() => {
-        //     // Access the iframe document
-        //     const iframeDocument = iframeRef.current?.contentDocument || iframeRef.current?.contentWindow?.document;
-            
-        //     if (iframeDocument) {
-        //         // Try to find and click the target button inside the iframe
-        //         const targetButton = iframeDocument.querySelector('.ytp-button:not([aria-disabled="true"]):not([disabled]):not([aria-hidden="true"])');
-        //         if (targetButton) {
-        //             (targetButton as HTMLElement).click();      
-        //         }
-        //     }
-        // }, 500); // Timeout to ensure iframe loads
+        // Update the iframe source to include autoplay
+        setIframeSrc("https://www.youtube.com/embed/K7u5sfXfAlc?autoplay=1");
     };
 
     return (
@@ -33,10 +22,9 @@ export const Fiveth = () => {
             <section className='fiveth container' id='video'>
                 {/* { video } */}
                 <iframe 
-                    ref={iframeRef} // Attach the ref here
                     width="560" 
                     height="315" 
-                    src="https://www.youtube.com/embed/K7u5sfXfAlc" 
+                    src={iframeSrc}
                     className={classNames('fiveth_video', { relative: isClicked })}
                     title="YouTube video player" 
                     frameBorder="0" 
