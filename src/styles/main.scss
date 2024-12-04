@@ -2047,6 +2047,71 @@ footer {
             &:hover {
                 transform: scale(1.1);
             }
+
+            a {
+                img {
+                    @include onMobile {
+                        zoom: 0.7;
+                    }
+        
+                    @include onMobile {
+                        zoom: 0.7;
+                    }
+        
+                    @include onMobile {
+                        zoom: 0.7;
+                    }
+        
+                    @include onMobile {
+                        zoom: 0.7;
+                    }
+        
+                    @include onMobile {
+                        width: 45px;
+                        height: 45px;
+                    }
+        
+                    @include onMobile {
+                        width: 45px;
+                        height: 45px;
+                    }
+        
+                    @include onMobile {
+                        width: 45px;
+                        height: 45px;
+                    }
+        
+                    @include onMobile {
+                        width: 45px;
+                        height: 45px;
+                    }
+        
+                    @include onMobile {
+                        width: 45px;
+                        height: 45px;
+                    }
+        
+                    @include onMobile {
+                        width: 45px;
+                        height: 45px;
+                    }
+        
+                    @include onBigTablet {
+                        width: 45px;
+                        height: 45px;
+                    }
+        
+                    @include onExtendedTablet {
+                        width: 45px;
+                        height: 45px;
+                    }
+        
+                    @include onDesktop {
+                        width: 45px;
+                        height: 45px;
+                    }
+                }
+            }
         }
     }
 }
