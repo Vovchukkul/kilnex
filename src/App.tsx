@@ -11,11 +11,23 @@ import { Six } from "./components/Six";
 import { Seven } from "./components/Seven";
 import { Footer } from "./components/Footer";
 import "./utils/mixins.scss";
+import { useState } from "react";
+import { Aside } from "./components/Aside";
 
 function App() {
+  const [isShowNav, setIsShowNav] = useState(false)
+
+  const handleClick = () => {
+    setIsShowNav(!isShowNav)
+  }
+
   return (
     <>
-      <Header />
+      <Header click={handleClick} isShowNav={isShowNav} />
+
+      {isShowNav && (
+        <Aside click={handleClick} />
+      )}
       
       <main>
         <Adv />

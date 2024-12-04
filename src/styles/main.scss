@@ -6,16 +6,12 @@ html {
 }
 
 body {
-    @include onBigTablet {
-        zoom: 0.44;
-    }
-
     @include onExtendedTablet {
         zoom: 0.5;
     }
 
     @include onBigDesktop {
-        zoom: 0.625;
+        zoom: 0.7 !important;
     }
 
     @include onDesktop {
@@ -61,7 +57,31 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         padding-inline: 30px;
     }
 
+    @include onLargeMobile {
+        padding-inline: 30px;
+    }
+
+    @include onExtendedMobile {
+        padding-inline: 30px;
+    }
+
+    @include onBigMobile {
+        padding-inline: 30px;
+    }
+
+    @include onSmallTablet {
+        padding-inline: 30px;
+    }
+
     @include onTablet {
+        padding-inline: 70px;
+    }
+
+    @include onBigTablet {
+        padding-inline: 70px;
+    }
+
+    @include onExtendedTablet {
         padding-inline: 70px;
     }
 
@@ -82,62 +102,58 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         gap: 14px;
 
         @include onMobile {
-            gap: 4px;
+            height: 40px;
+            width: 140px;
         }
-
-        @include onTablet {
-            zoom: 1.4;
-        }
-
-        @include onSmallTablet {
-            zoom: 1.5;
-        }
-
-        @include onBigMobile {
-            zoom: 1.6;
-        }
-
-        @include onExtendedMobile {
-            zoom: 1.5;
-        }
-
         @include onLargeMobile {
-            zoom: 1.4;
+            height: 40px;
+            width: 140px;
+        }
+        @include onExtendedMobile {
+            height: 40px;
+            width: 140px;
+        }
+        @include onBigMobile {
+            height: 40px;
+            width: 140px;
+        }
+        @include onTablet {
+            height: 40px;
+            width: 140px;
         }
 
-        @include onMobile {
-            zoom: 1.38;
-        }
-    }
-
-    &_logo_img {
-        width: 75px;
-        height: 72px;
-
-        @include onSmallTablet {
-            width: 40px;
-            height: 50px;
+        @include onBigTablet {
+            height: 40px;
+            width: 140px;
         }
 
-        @include onMobile {
-            width: 30px;
-            height: 50px;
-        }
-    }
+        // @include onMobile {
+        //     gap: 4px;
+        // }
 
-    &_logo_text {
-        width: 149px;
-        height: 56px;
+        // @include onTablet {
+        //     zoom: 1.4;
+        // }
 
-        @include onSmallTablet {
-            width: 100px;
-            height: 56px;
-        }
+        // @include onSmallTablet {
+        //     zoom: 1.5;
+        // }
 
-        @include onMobile {
-            width: 50px;
-            height: 56px;
-        }
+        // @include onBigMobile {
+        //     zoom: 1.6;
+        // }
+
+        // @include onExtendedMobile {
+        //     zoom: 1.5;
+        // }
+
+        // @include onLargeMobile {
+        //     zoom: 1.4;
+        // }
+
+        // @include onMobile {
+        //     zoom: 1.38;
+        // }
     }
 
     nav {
@@ -166,6 +182,63 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         }
     }
 
+    &_icon {
+        background-image: url(../assets/burger.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 36px;
+        width: 36px;
+        cursor: pointer;
+
+        @include onSmallTablet {
+            display: block;
+        }
+
+        @include onTablet {
+            display: block;
+        }
+
+        @include onBigTablet {
+            display: block;
+        }
+
+        @include onExtendedTablet {
+            display: none;
+        }
+
+        @include onBigDesktop {
+            display: none;
+        }
+
+        @include onDesktop {
+            display: none;
+        }
+
+        @include onExtendedDesktop {
+            display: none;
+        }
+
+        @include onAverageDesktop {
+            display: none;
+        }
+
+        @include onBiggestDesktop {
+            display: none;
+        }
+
+        // @include onBiggestScreen {
+        //     display: none;
+        // }
+
+        // @include onBiggestScreen2 {
+        //     display: none;
+        // }
+
+        // @include onFullHD {
+        //     display: none;
+        // }
+    }
+
     nav ul {
         display: flex;
         justify-content: center;
@@ -179,6 +252,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             font-weight: 700;
             color: #FFFFFF;
             cursor: pointer;
+
+            transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 0.8; 
+            }
         }
     }
 
@@ -187,6 +266,44 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         font-size: 20px;
         text-decoration: none;
         font-weight: 700;
+
+
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.8; 
+        }
+    }
+}
+
+.aside {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color:#222121;
+    position: absolute;
+    left: 27%;
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        list-style: none;
+        flex-direction: column;
+
+        li {
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 700;
+            color: #FFFFFF;
+            cursor: pointer;
+
+            transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 0.8; 
+            }
+        }
     }
 }
 
@@ -306,34 +423,21 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         color: transparent;
         
         span {
-            background-color: #760303; /* Светлый цвет для стеклянного эффекта */
+            background-color: #760303;
             background-clip: text;
         }
     }
 
     &_btn {
         position: relative;
-        // background-image: url(../assets/shop_btn.svg);
-        // background-repeat: no-repeat;
-        // background-size: cover;
         height: 60px;
         width: 215px;
-
-        // transition: ease linear 0.5s;
 
         span {
             font-weight: 500px;
             font-size: 22px;
             color: #FFFFFF;
         }
-
-        // &:hover {
-        //     transform: scale(1.1);
-            
-        //     span {
-        //         color: #FF0000;
-        //     }
-        // }
     }
 
     &_img {
@@ -363,8 +467,39 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         gap: 40px;
         margin-bottom: 114px;
 
-        @include onTablet {
+        @include onMobile {
             flex-direction: column;
+            margin: 0 auto;
+
+            > :nth-child(1) {
+                > :nth-child(1) {
+                    flex-direction: column;
+                }
+            }
+        }
+        @include onLargeMobile {
+            flex-direction: column;
+            margin: 0 auto;
+
+            > :nth-child(1) {
+                > :nth-child(1) {
+                    flex-direction: column;
+                }
+            }
+        }
+        @include onExtendedMobile {
+            flex-direction: column;
+            margin: 0 auto;
+
+            > :nth-child(1) {
+                > :nth-child(1) {
+                    flex-direction: column;
+                }
+            }
+        }
+        @include onBigMobile {
+            flex-direction: column;
+            margin: 0 auto;
 
             > :nth-child(1) {
                 > :nth-child(1) {
@@ -373,29 +508,15 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             }
         }
 
-        @include onSmallTablet {
+        @include onTablet {
             flex-direction: column;
-            margin-bottom: 50px;
-        }
+            margin: 0 auto;
 
-        @include onBigMobile {
-            flex-direction: column;
-            margin-bottom: 30px;
-        }
-
-        @include onExtendedMobile {
-            flex-direction: column;
-            margin-bottom: 20px;
-        }
-
-        @include onLargeMobile {
-            flex-direction: column;
-            margin-bottom: 20px;
-        }
-
-        @include onMobile {
-            flex-direction: column;
-            margin-bottom: 20px;
+            > :nth-child(1) {
+                > :nth-child(1) {
+                    flex-direction: column;
+                }
+            }
         }
     }
 }
@@ -442,6 +563,29 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 }
 
 .s {
+    @include onMobile {
+        align-self: start;
+    }
+    @include onLargeMobile {
+        align-self: start;
+    }
+    @include onExtendedMobile {
+        align-self: start;
+    }
+    @include onBigMobile {
+        align-self: start;
+    }
+    @include onTablet {
+        align-self: start;
+    }
+    @include onBigTablet {
+        align-self: start;
+    }
+
+    @include onBigTablet {
+        align-self: start;
+    }
+
     @include onTablet {
         zoom: 0.7;
     }
@@ -449,45 +593,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     @include onSmallTablet {
         zoom: 0.6;
     }
+
+    @include onBigMobile {
+        zoom: 0.6;
+    }
+
+    @include onExtendedMobile {
+        zoom: 0.58;
+    }
+
+    @include onLargeMobile {
+        zoom: 0.5;
+    }
+
+    @include onMobile {
+        zoom: 0.4;
+    }
 }
-
-// .slick-slider {
-//     @include onTablet {
-//         width: 700px;
-//         height: 100px;
-//     }
-// }
-
-// .l {
-//     @include onTablet {
-//         display: flex;
-//         flex-direction: row !important;
-//     }
-// }
-
-// .nav {
-//     @include onTablet {
-//         width: 680px !important;
-//         height: 100px !important;
-//     }
-// }
 
 .slick-list {
     height: 700px !important;
     display: flex;
     gap: 20px;
-
-    // @include onTablet {
-    //     height: 1200px !important;
-    // }
 }
 
-// .slick-track {
-//     @include onTablet {
-//         display: flex !important;
-//         flex-direction: row !important;
-//     }
-// }
 
 .slick-prev {
     display: block;
@@ -534,16 +663,16 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     }
 
     @include onExtendedMobile {
-        zoom: 0.6;
+        zoom: 0.7;
         padding-left: 35px;
     }
 
     @include onLargeMobile {
-        zoom: 0.6;
+        zoom: 0.7;
     }
 
     @include onMobile {
-        zoom: 0.6;
+        zoom: 0.7;
     }
 }
 
@@ -698,8 +827,8 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             top: 35%;
             left: -30px;
             box-shadow: 
-                0 0 5px 2px rgba(0, 160, 70, 0.4),    /* первая тень для слабого внутреннего свечения */
-                0 0 10px 5px rgba(0, 160, 70, 0.3),   /* вторая тень для умеренного свечения */
+                0 0 5px 2px rgba(0, 160, 70, 0.4),
+                0 0 10px 5px rgba(0, 160, 70, 0.3),   
                 0 0 20px 10px rgba(0, 160, 70, 0.2);
         }
     }
@@ -725,7 +854,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 .second_bottom {
     padding: 60px 60px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 60px;
     border: 1px solid #EB7D01;
 
@@ -734,24 +863,23 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     }
 
     @include onSmallTablet {
-        zoom: 0.7;
-        padding: 30px 30px;
+        flex-direction: column;
     }
 
     @include onBigMobile {
-        zoom: 0.5;
+        flex-direction: column;
     }
 
     @include onExtendedMobile {
-        zoom: 0.4;
+        flex-direction: column;
     }
 
     @include onLargeMobile {
-        zoom: 0.3;
+        flex-direction: column;
     }
 
     @include onMobile {
-        zoom: 0.3;
+        flex-direction: column;
     }
 
     &_lf {
@@ -823,7 +951,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 }
 
 .line {
-    width: 1px;
+    width: 3px;
     height: 583px;
     background-color: #EB7D01;
     display: block;
@@ -833,10 +961,25 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         width: 100%;
     }
 
-    // @include onBigMobile {
-    //     height: 1px;
-    //     width: 100%;
-    // }
+    @include onMobile {
+        height: 1px;
+        width: 100%;
+    }
+
+    @include onExtendedMobile {
+        height: 1px;
+        width: 100%;
+    }
+
+    @include onBigMobile {
+        height: 1px;
+        width: 100%;
+    }
+
+    @include onSmallTablet {
+        height: 1px;
+        width: 100%;
+    }
 }
 
 .com3 {
@@ -1028,28 +1171,6 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 background-color: #4F4F4F;
             }
         }
-
-        // > :nth-child(1) {
-        //     .range {
-        //         div {
-        //             width: 96%;
-        //             height: 100%;
-        //             border-radius: 40px;
-        //             background-color: #EB7D01;
-        //         }
-        //     }
-        // }
-
-        // > :nth-child(2) {
-        //     .range {
-        //         div {
-        //             width: 3%;
-        //             height: 100%;
-        //             border-radius: 40px;
-        //             background-color: #EB7D01;
-        //         }
-        //     }
-        // }
     }
 
     &_bottom {
@@ -1058,10 +1179,47 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         margin: 0 auto;
         margin-bottom: 150px;
 
+        .slick-slider {
+            @include onTablet {
+                .slick-list {
+                    width: 500px !important;
+                }
+            }
+
+            @include onMobile {
+                .slick-list {
+                    width: 500px !important;
+                }
+            }
+
+            @include onLargeMobile {
+                .slick-list {
+                    width: 500px !important;
+                }
+            }
+
+            @include onExtendedMobile {
+                .slick-list {
+                    width: 500px !important;
+                }
+            }
+
+            @include onBigMobile {
+                .slick-list {
+                    width: 500px !important;
+                }
+            }
+
+            @include onSmallTablet {
+                .slick-list {
+                    width: 500px !important;
+                }
+            }
+        }
+
         @include onTablet {
             zoom: 0.45;
             display: flex;
-            // height: 2000px;
         }
 
         @include onSmallTablet {
@@ -1094,24 +1252,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             display: flex !important;
             flex-direction: row;
             gap: 21px;
-
-            // @include onTablet {
-            //     flex-direction: column;
-            // }
         }
 
         &_comment {
             width: 466px !important;
             height: 446px !important;
-            // border: 0.5px solid #EB7D01;
-            // box-shadow: 0px 0px 20px 0px #EB7D0199;
-            // box-shadow: 0px -20px 20px 0px transparent, 0px 20px 0px 0px #EB7D0199;
             padding: 40px 20px 0;
-            // border-radius: 40px;
-            // background-color: #000000;
-            // border-bottom-left-radius: 0;
-            // border-bottom-right-radius: 0;
-            // border-bottom: none;
             background-image: url("../assets/comment_svg.svg");
             background-repeat: no-repeat;
             box-sizing: border-box;
@@ -1174,7 +1320,6 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     @include onTablet {
         display: flex;
-        left: 650px;
     }
 
     li button {
@@ -1194,10 +1339,6 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     opacity: .75;
     color: #EB7D01 !important;
 }
-
-// .slick-dots li button {
-//     border: 1px solid #EB7D01 !important;
-// }
 
 .com-45 {
     width: 100%;
@@ -1246,7 +1387,6 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         height: 800px;
         padding-left: 120px;
         margin-top: -40px;
-        // margin-bottom: ;
     }
 
     @include onSmallTablet {
@@ -1323,8 +1463,8 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 top: 35%;
                 left: -30px;
                 box-shadow: 
-                    0 0 5px 2px rgba(0, 160, 70, 0.4),    /* первая тень для слабого внутреннего свечения */
-                    0 0 10px 5px rgba(0, 160, 70, 0.3),   /* вторая тень для умеренного свечения */
+                    0 0 5px 2px rgba(0, 160, 70, 0.4),  
+                    0 0 10px 5px rgba(0, 160, 70, 0.3), 
                     0 0 20px 10px rgba(0, 160, 70, 0.2);
             }
         }
@@ -1339,32 +1479,6 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     z-index: 1;
     position: relative;
 
-    // @include onTablet {
-    //     zoom: 0.45;
-    //     padding-top: 60px;
-    // }
-
-    // @include onSmallTablet {
-    //     zoom: 0.4;
-    //     padding-top: 60px;
-    // }
-
-    // @include onBigMobile {
-    //     zoom: 0.35;
-    // }
-
-    // @include onExtendedMobile {
-    //     zoom: 0.3;
-    // }
-
-    // @include onLargeMobile {
-    //     zoom: 0.2;
-    // }
-
-    // @include onMobile {
-    //     zoom: 0.2;
-    // }
-
     &_video {
         height: 700px;
         width: 1440px;
@@ -1378,42 +1492,6 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         z-index: 1000;
         position: relative;
         top: -59px;
-
-        // @include onTablet {
-        //     width: 1560px;
-        //     height: 900px;
-        //     top: -75px;
-        // }
-
-        // @include onSmallTablet {
-        //     width: 1560px;
-        //     height: 900px;
-        //     top: -75px;
-        // }
-
-        // @include onBigMobile {
-        //     width: 1560px;
-        //     height: 900px;
-        //     top: -75px;
-        // }
-
-        // @include onExtendedMobile {
-        //     width: 1560px;
-        //     height: 900px;
-        //     top: -75px;
-        // }
-
-        // @include onLargeMobile {
-        //     width: 1560px;
-        //     height: 900px;
-        //     top: -75px;
-        // }
-
-        // @include onMobile {
-        //     width: 1560px;
-        //     height: 900px;
-        //     top: -75px;
-        // }
     }
 
     &_y_button {
@@ -1424,14 +1502,6 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         position: absolute;
         cursor: pointer;
         top: 42%;
-
-        // @include onTablet {
-        //     top: 38%;
-        // }
-
-        // @include onSmallTablet {
-        //     top: 38%;
-        // }
     }
 }
 
@@ -1545,8 +1615,8 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                     top: 35%;
                     left: -30px;
                     box-shadow: 
-                        0 0 5px 2px rgba(0, 160, 70, 0.4),    /* первая тень для слабого внутреннего свечения */
-                        0 0 10px 5px rgba(0, 160, 70, 0.3),   /* вторая тень для умеренного свечения */
+                        0 0 5px 2px rgba(0, 160, 70, 0.4),   
+                        0 0 10px 5px rgba(0, 160, 70, 0.3),  
                         0 0 20px 10px rgba(0, 160, 70, 0.2);
                 }
             }
@@ -1853,10 +1923,6 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     padding-bottom: 20px;
 }
 
-// .seven_block .adv_img {
-//     width: 217px;
-// }
-
 footer {
     background-color: #000000;
 
@@ -1929,7 +1995,13 @@ footer {
             font-weight: 700;
             color: #FFFFFF;
             font-family: $exo-bold;
-            cursor: pointer
+            cursor: pointer;
+
+            transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 0.8; 
+            }
         }
     }
 }
@@ -1939,7 +2011,6 @@ footer {
     flex-direction: row;
     gap: 14px;
     align-items: center;
-    // padding-left: 240px;
 
     > :nth-child(1) {
         width: 75px;
@@ -2069,27 +2140,16 @@ footer {
     height: 8px;
     border-radius: 40px;
     background-color: #4F4F4F !important;
-    appearance: none; /* Remove default browser styles */
-    outline: none;    /* Remove focus outline */
+    appearance: none;
+    outline: none;  
     appearance: #EB7D01;
 }
-
-/* Style the range thumb */
-// .range::-webkit-slider-thumb {
-//     // appearance: none;
-//     appearance: #EB7D01;
-//     width: 20px;
-//     height: 20px;
-//     border-radius: 50%;
-//     background: #FFFFFF; /* Adjust as needed */
-//     cursor: pointer;
-// }
 
 .range::-moz-range-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #FFFFFF; /* Adjust as needed */
+    background: #FFFFFF; 
     cursor: pointer;
 }
 
@@ -2097,11 +2157,10 @@ footer {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #FFFFFF; /* Adjust as needed */
+    background: #FFFFFF;
     cursor: pointer;
 }
 
-/* Optionally style the range track for WebKit browsers */
 .range::-webkit-slider-runnable-track {
     width: 100%;
     height: 8px;
@@ -2111,9 +2170,9 @@ footer {
 
 
 .range::-webkit-slider-thumb {
-    appearance: none; /* Вимкнути стандартну стилізацію */
-    width: 0;         /* Ширина 0 */
-    height: 0;        /* Висота 0 */
+    appearance: none; 
+    width: 0;         
+    height: 0;        
 }
 
 .range::-moz-range-thumb {
@@ -2128,12 +2187,16 @@ footer {
     border: none;
 }
 
-
 .ytp-large-button {
     background-color: #fff !important;
 }
 
 .product_slider {
     width: 100%;
-    max-width: 600px;
+}
+
+.slick-dots {
+    .slick-active {
+        margin-right: 8px;
+    }
 }

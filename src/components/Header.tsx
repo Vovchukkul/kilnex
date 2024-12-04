@@ -2,8 +2,17 @@ import '../styles/index.scss'
 import '../styles/main.scss'
 import logo from '../assets/logo_kilnex.svg';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import classNames from 'classnames';
 
-export const Header = () => {
+import burger from "../assets/burger.svg"
+import close from "../assets/close.svg"
+
+type Props = {
+    click: () => void,
+    isShowNav: boolean
+}
+
+export const Header: React.FC<Props> = ({ click, isShowNav }) => {
     return (
         <header className='header container'>
             <div className="header_logo">
@@ -29,6 +38,9 @@ export const Header = () => {
                     </Link>
                 </ul>
             </nav>
+            <div style={{
+                backgroundImage: `url(${isShowNav ? close : burger})` 
+            }} className={classNames("header_icon")} onClick={() => click()}></div>
 
             <a href="tel:11234567890">+1(123)456-7890</a>
         </header>

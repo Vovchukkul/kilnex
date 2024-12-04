@@ -1,5 +1,5 @@
 // import ThreeSixty from 'react-360-view';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "../styles/index.scss";
 import "../styles/main.scss";
 

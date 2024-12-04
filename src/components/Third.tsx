@@ -2,6 +2,7 @@ import '../styles/index.scss'
 import '../styles/main.scss'
 import Slider from "react-slick";
 import { Comment } from './Comment';
+import { useEffect, useState } from 'react';
 
 export const Third = () => {
     const settings = {
@@ -11,6 +12,20 @@ export const Third = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
     };
+
+    const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     return (
         <>
@@ -135,35 +150,34 @@ export const Third = () => {
                     </div>
                 </div>
                 <div className="third_bottom">
-                    {/* { slider } */}
-                    <Slider {...settings}>
-                        <div className='third_bottom_slide'>
-                            <Comment />
-                            <Comment />
-                            <Comment />
-                        </div>
-                        <div className='third_bottom_slide'>
-                            <Comment />
-                            <Comment />
-                            <Comment />
-                        </div>
-                        <div className='third_bottom_slide'>
-                            <Comment />
-                            <Comment />
-                            <Comment />
-                        </div>
-                        <div className='third_bottom_slide'>
-                            <Comment />
-                            <Comment />
-                            <Comment />
-                        </div>
-                        <div className='third_bottom_slide'>
-                            <Comment />
-                            <Comment />
-                            <Comment />
-                        </div>
-                    </Slider>
-                </div>
+                <Slider {...settings}>
+                    <div className="third_bottom_slide">
+                        <Comment />
+                        {windowWidth > 854 && <Comment />}
+                        {windowWidth > 854 && <Comment />}
+                    </div>
+                    <div className="third_bottom_slide">
+                        <Comment />
+                        {windowWidth > 854 && <Comment />}
+                        {windowWidth > 854 && <Comment />}
+                    </div>
+                    <div className="third_bottom_slide">
+                        <Comment />
+                        {windowWidth > 854 && <Comment />}
+                        {windowWidth > 854 && <Comment />}
+                    </div>
+                    <div className="third_bottom_slide">
+                        <Comment />
+                        {windowWidth > 854 && <Comment />}
+                        {windowWidth > 854 && <Comment />}
+                    </div>
+                    <div className="third_bottom_slide">
+                        <Comment />
+                        {windowWidth > 854 && <Comment />}
+                        {windowWidth > 854 && <Comment />}
+                    </div>
+                </Slider>
+            </div>
             </section>
         </>
     )
