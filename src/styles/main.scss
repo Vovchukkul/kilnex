@@ -196,6 +196,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     background-size: cover;
     height: 850px;
     padding-top: 170px;
+    height: 100vh;
 
     @include onTablet {
         padding-top: 60px;
@@ -1583,6 +1584,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     flex-direction: column;
     padding-top: 150px;
     padding-bottom: 150px;
+    padding-inline: 0;
 
     @include onTablet {
         zoom: 0.5;
@@ -1608,6 +1610,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         zoom: 0.3;
     }
 
+    &_wrap {
+        margin: 0 auto;
+    }
+
     h2 {
         font-size: 32px;
         font-weight: 700;
@@ -1617,7 +1623,6 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     }
 
     &_block {
-        align-self: center;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -1924,6 +1929,7 @@ footer {
             font-weight: 700;
             color: #FFFFFF;
             font-family: $exo-bold;
+            cursor: pointer
         }
     }
 }
@@ -2125,4 +2131,9 @@ footer {
 
 .ytp-large-button {
     background-color: #fff !important;
+}
+
+.product_slider {
+    width: 100%;
+    max-width: 600px;
 }

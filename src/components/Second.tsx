@@ -8,6 +8,7 @@ import { useState } from 'react';
 import classNames from 'classnames';
 import com3 from '../assets/com3.svg';
 import { Link } from 'react-scroll';
+import { ProductView } from './ProductView';
 
 export const Second = () => {
     const [currTab, setCurrTab] = useState(1)
@@ -112,20 +113,8 @@ export const Second = () => {
                   )}
 
                   {currTab === 3 && (
-                    <p>
-                      <span>KilNex Smile LX02 multifunctional all-metal rechargeable headlamp with extra powerful diffused red light</span> <br />
-                      <br />
-                      <span>The KilNex Smile LX02 is a premium innovative headlamp that combines high quality with affordability. Featuring a powerful red LED of 140 lumens, the model is much more convenient to use during combat missions, hiking, camping, fishing, etc.</span> <br />
-                      <br />
-                      <span>Of particular value is the KilNex Smile LX02 for the military. The use of red light allows you to see better in the dark. This secret of night vision has long been familiar to special forces, military when situations arise where it is important not to lose vigilance for a minute. Especially when changing light - the transition from light to darkness, and vice versa.</span> <br />
-                      <br />
-                      <span>Red light is practically invisible for animals, does not scare away fish, does not attract insects during night fishing or sitting around the campfire, unlike the white light, which is attractive to mosquitoes and gnats.</span> <br />
-                      <br />
-                      <span>Being accustomed to the darkness, a person can navigate in space under starlight, but this ability is lost if white light is turned on. At the same time, the lighting is of sufficient quality, the beam does not glare and provides a good overview.</span> <br />
-                      <br />
-                      <span>Being accustomed to the darkness, a person can navigate in space under starlight, but this ability is lost if white light is turned on. At the same time, the lighting is of sufficient quality, the beam does not glare and provides a good overview.</span> <br />
-                      <br />
-                    </p>
+                    // {360-slider}
+                    <ProductView />
                   )}  
               </div>
             </div>

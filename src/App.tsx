@@ -17,8 +17,6 @@ function App() {
     <>
       <Header />
       
-      {/* <aside></aside> */}
-
       <main>
         <Adv />
 

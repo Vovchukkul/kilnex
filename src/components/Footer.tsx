@@ -5,6 +5,7 @@ import logo_text from "../assets/logo_text.svg"
 import insta from "../assets/instagram.svg"
 import face from "../assets/facebook.svg"
 import youtube from "../assets/youtube.svg"
+import { Link } from "react-scroll"
 
 export const Footer = () => {
     return (
@@ -15,19 +16,41 @@ export const Footer = () => {
                     <img src={logo_text} alt="logo_text" />
                 </div>
                 <ul>
-                    <li>PRODUCT</li>
-                    <li>REVIEWS</li>
-                    <li>VIDEO</li>
-                    <li>DESCRIPTION</li>
-                    <li>ADDITIONAL PRODUCTS</li>
+                    <Link to="product">
+                        <li>PRODUCT</li>
+                    </Link>
+                    <Link to="reviews">
+                        <li>REVIEWS</li>
+                    </Link>
+                    <Link to="video">
+                        <li>VIDEO</li>
+                    </Link>
+                    <Link to="description">
+                        <li>DESCRIPTION</li>
+                    </Link>
+                    <Link to="additional">
+                        <li>ADDITIONAL PRODUCTS</li>
+                    </Link>
                 </ul>
                 <ul>
-                    <li>SHIPPING</li>
-                    <li>PAYMENT</li>
-                    <li>HOW TO ORDER</li>
-                    <li>USER AGREEMENT</li>
-                    <li>ADDITIONAL PRODUCTS</li>
-                    <li>RETURN</li>
+                    <a href="">
+                        <li>SHIPPING</li>
+                    </a>
+                    <a href="">
+                        <li>PAYMENT</li>
+                    </a>
+                    <a href="">
+                        <li>HOW TO ORDER</li>
+                    </a>
+                    <a href="">
+                        <li>USER AGREEMENT</li>
+                    </a>
+                    <a href="">
+                        <li>ADDITIONAL PRODUCTS</li>
+                    </a>
+                    <a href="">
+                        <li>RETURN</li>
+                    </a>
                 </ul>
                 <div className="footer_block">
                     <p>WE ARE IN SOCIAL NETWORKS:</p>
