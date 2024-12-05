@@ -42,7 +42,7 @@ export const Header: React.FC<Props> = ({ click, isShowNav }) => {
                 backgroundImage: `url(${isShowNav ? close : burger})` 
             }} className={classNames("header_icon")} onClick={() => click()}></div>
 
-            <a href="tel:11234567890">+1(123)456-7890</a>
+            <a className='header_link' href="tel:11234567890">+1(123)456-7890</a>
         </header>
     )
 }

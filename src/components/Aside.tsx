@@ -27,6 +27,7 @@ export const Aside: React.FC<Props> = ({ click }) => {
                         <li onClick={() => click()}>ADDITIONAL PRODUCTS</li>
                     </Link>
                 </ul>
+                <a className='header_link' href="tel:11234567890">+1(123)456-7890</a>
             </nav>            
         </div>
     )

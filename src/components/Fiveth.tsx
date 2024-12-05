@@ -13,7 +13,6 @@ export const Fiveth = () => {
     const handleClicked = () => {
         setIsClicked(true);
 
-        // Update the iframe source to include autoplay
         setIframeSrc("https://www.youtube.com/embed/K7u5sfXfAlc?autoplay=1");
     };
 
