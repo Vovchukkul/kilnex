@@ -114,7 +114,9 @@ export const Second = () => {
 
                   {currTab === 3 && (
                     // {360-slider}
-                    <ProductView />
+                    <div className="product_wrap">
+                      <ProductView />
+                    </div>
                   )}  
               </div>
             </div>

@@ -389,6 +389,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     padding-top: 170px;
     height: 100vh;
 
+    @include onBigTablet {
+        padding-top: 70px;
+    }
+
     @include onTablet {
         padding-top: 60px;
     }
@@ -644,6 +648,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         padding-bottom: 70px;
     }
 
+    @include onBigTablet {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
     &_top {
         display: flex;
         flex-direction: row;
@@ -704,6 +713,17 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         }
 
         @include onTablet {
+            flex-direction: column;
+            margin: 0 auto;
+
+            > :nth-child(1) {
+                > :nth-child(1) {
+                    flex-direction: column;
+                }
+            }
+        }
+
+        @include onBigTablet {
             flex-direction: column;
             margin: 0 auto;
 
@@ -870,6 +890,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     @include onMobile {
         zoom: 0.7;
+    }
+
+    @include onBigTablet {
+        zoom: 1.2;
     }
 }
 
@@ -1122,6 +1146,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         flex-direction: column;
     }
 
+    @include onBigTablet {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 20px 20px;
+        gap: 20px;
+    }
+
     &_lf {
         display: flex;
         flex-direction: column;
@@ -1198,6 +1230,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             @include onSmallTablet {
                 display: none;
             }
+
+            @include onBigTablet {
+                display: none;
+            }
         }
     }
 
@@ -1239,11 +1275,24 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     }
 }
 
+.product_wrap {
+    @include onBigTablet {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
 .line {
     width: 3px;
     height: 583px;
     background-color: #EB7D01;
     display: block;
+
+    @include onBigTablet {
+        height: 1px;
+        width: 100%;
+    }
 
     @include onTablet {
         height: 1px;
@@ -1299,6 +1348,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     @include onSmallTablet {
         margin-bottom: 70px;
     }
+
+    @include onBigTablet {
+        margin-bottom: 100px;
+    }
 }
 
 .third {
@@ -1342,6 +1395,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             font-size: 30px;
             margin-bottom: 20px;
         }
+
+        @include onBigTablet {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
     }
 
     &_top {
@@ -1351,6 +1409,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         align-self: flex-end;
         align-items: center;
         margin-bottom: 70px;
+
+        @include onBigTablet {
+            flex-direction: column;
+            gap: 100px;
+            align-self: center;
+        }
 
         @include onTablet {
             flex-direction: column;
@@ -1438,6 +1502,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             @include onTablet {
                 font-size: 40px;
             }
+
+            @include onBigTablet {
+                font-size: 44px;
+            }
         }
 
         span {
@@ -1512,6 +1580,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         align-items: start;
         gap: 24px;
         align-self: center;
+
+        @include onBigTablet {
+            zoom: 0.8;
+            align-items: center;
+            align-self: center;
+        }
 
         @include onTablet {
             zoom: 0.7;
@@ -1647,8 +1721,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             }
         }
 
+        @include onBigTablet {
+            zoom: 0.6;
+        }
+
         @include onTablet {
-            zoom: 0.45;
+            zoom: 0.6;
             display: flex;
         }
 
@@ -1778,6 +1856,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     margin-top: -60px;
     margin-bottom: 150px;
 
+    @include onBigTablet {
+        margin-bottom: 100px;
+    }
+
     @include onTablet {
         margin-bottom: 60px;
     }
@@ -1811,6 +1893,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     margin-top: -60px;
     padding-top: 150px;
     padding-left: 240px;
+
+    @include onBigTablet {
+        zoom: 0.8;
+        height: 800px;
+        padding-left: 120px;
+        padding-bottom: 100px;
+        margin-top: -40px;
+    }
 
     @include onMobile {
         padding-top: 60px;
@@ -1948,6 +2038,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         padding-bottom: 100px;
     }
 
+    @include onBigTablet {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
     &_video {
         height: 700px;
         width: 1440px;
@@ -1982,6 +2077,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         }
 
         @include onTablet {
+            height: auto;
+            width: auto;
+        }
+
+        @include onBigTablet {
             height: auto;
             width: auto;
         }
@@ -2027,6 +2127,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             width: 500px;
             top: -25px;
         }
+
+        @include onBigTablet {
+            height: 400px;
+            width: 600px;
+            top: -30px;
+        }
     }
 
     &_y_button {
@@ -2071,6 +2177,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         @include onTablet {
             width: 50px;
             height: 50px;
+            top: 40%;
+        }
+
+        @include onBigTablet {
+            width: 64px;
+            height: 64px;
             top: 40%;
         }
     }
@@ -2268,6 +2380,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 width: 400px;
                 height: 400px;
             }
+
+            @include onBigTablet {
+                zoom: 0.6;
+            }
         }
     }
 
@@ -2354,6 +2470,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         border: 1px solid #EB7D01;
         background-color: #000000;
         max-width: 1440px;
+
+        @include onBigTablet {
+            zoom: 0.6;
+        }
 
         @include onSmallTablet {
             flex-direction: row;
@@ -2608,6 +2728,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
 footer {
     background-color: #000000;
+
+    @include onBigTablet {
+        zoom: 0.6;
+    }
 
     @include onTablet {
         zoom: 0.5;
