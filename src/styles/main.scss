@@ -110,25 +110,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             width: 140px;
         }
         @include onExtendedMobile {
-            height: 40px;
-            width: 140px;
+            height: 60px;
+            width: 160px;
         }
         @include onBigMobile {
-            height: 40px;
-            width: 140px;
-        }
-        @include onTablet {
-            height: 40px;
-            width: 140px;
+            height: 60px;
+            width: 160px;
         }
 
-        @include onBigTablet {
-            height: 40px;
-            width: 140px;
+        @include onSmallTablet {
+            height: 70px;
+            width: 180px;
+        }
+
+        @include onTablet {
+            height: 70px;
+            width: 180px;
         }
     }
 
     nav {
+        @include onBigTablet {
+            display: none;
+        }
+
         @include onTablet {
             display: none;
         }
@@ -239,6 +244,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         @include onMobile {
             display: none;
         }
+
+        @include onLargeMobile {
+            display: none;
+        }
+
+        @include onExtendedMobile {
+            display: none;
+        }
+
+        @include onBigMobile {
+            display: none;
+        }
+
+        @include onSmallTablet {
+            display: none;
+        }
+
+        @include onTablet {
+            display: none;
+        }
+
+        @include onBigTablet {
+            display: none;
+        }
     }
 }
 
@@ -250,6 +279,31 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     left: 27%;
 
     @include onMobile {
+        padding: 10px 0 10px;
+        right: 0;
+    }
+
+    @include onLargeMobile {
+        padding: 10px 0 10px;
+        right: 0;
+    }
+
+    @include onExtendedMobile {
+        padding: 10px 0 10px;
+        right: 0;
+    }
+
+    @include onSmallTablet {
+        padding: 10px 0 10px;
+        right: 0;
+    }
+
+    @include onTablet {
+        padding: 10px 0 10px;
+        right: 0;
+    }
+
+    @include onBigTablet {
         padding: 10px 0 10px;
         right: 0;
     }
@@ -281,6 +335,26 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
         @include onMobile {
             gap: 10px;
+        }
+
+        @include onLargeMobile {
+            gap: 20px;
+        }
+
+        @include onExtendedMobile {
+            gap: 20px;
+        }
+
+        @include onSmallTablet {
+            gap: 20px;
+        }
+
+        @include onTablet {
+            gap: 30px;
+        }
+
+        @include onBigTablet {
+            gap: 30px;
         }
 
         li {
@@ -344,6 +418,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             @include onMobile {
                 zoom: 0.8;
             }
+
+            @include onExtendedMobile {
+                zoom: 1;
+            }
         }
 
         h1 {
@@ -359,7 +437,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             }
 
             @include onLargeMobile {
-                zoom: 0.45;
+                font-size: 36px;
             }
             
             @include onExtendedMobile {
@@ -394,6 +472,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         font-family: $exo_normal, serif;
 
         @include onMobile {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        @include onExtendedMobile {
             font-size: 16px;
             line-height: 20px;
         }
@@ -443,6 +526,10 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         font-family: $exo_bold ,serif;
 
         @include onMobile {
+            font-size: 70px;
+        }
+
+        @include onExtendedMobile {
             font-size: 70px;
         }
     }
@@ -529,6 +616,16 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     gap: 80px;
 
     @include onMobile {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @include onLargeMobile {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    @include onExtendedMobile {
         padding-top: 50px;
         padding-bottom: 50px;
     }
@@ -672,7 +769,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     }
 
     @include onExtendedMobile {
-        zoom: 0.58;
+        zoom: 0.5;
     }
 
     @include onLargeMobile {
@@ -742,7 +839,6 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     @include onExtendedMobile {
         zoom: 0.7;
-        padding-left: 35px;
     }
 
     @include onLargeMobile {
@@ -977,10 +1073,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     @include onExtendedMobile {
         flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 20px 20px;
+        gap: 20px;
     }
 
     @include onLargeMobile {
         flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 20px 20px;
+        gap: 20px;
     }
 
     @include onMobile {
@@ -1006,6 +1110,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 gap: 20px;
             }
 
+            @include onLargeMobile {
+                gap: 20px;
+            }
+
+            @include onExtendedMobile {
+                gap: 20px;
+            }
+
             @include onTablet {
                 gap: 50px;
             }
@@ -1021,6 +1133,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 @include onMobile {
                     font-size: 12px;
                 }
+
+                @include onLargeMobile {
+                    font-size: 16px;
+                }
+
+                @include onExtendedMobile {
+                    font-size: 16px;
+                }
             }
         }
 
@@ -1029,6 +1149,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             height: 255px;
 
             @include onMobile {
+                display: none;
+            }
+
+            @include onLargeMobile {
+                display: none;
+            }
+
+            @include onExtendedMobile {
                 display: none;
             }
 
@@ -1092,6 +1220,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         width: 100%;
     }
 
+    @include onLargeMobile {
+        height: 1px;
+        width: 100%;
+    }
+
     @include onExtendedMobile {
         height: 1px;
         width: 100%;
@@ -1115,6 +1248,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     @include onMobile {
         margin-bottom: 30px;
     }
+
+    @include onLargeMobile {
+        margin-bottom: 40px;
+    }
+
+    @include onExtendedMobile {
+        margin-bottom: 50px;
+    }
 }
 
 .third {
@@ -1130,6 +1271,16 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         margin-bottom: 60px;
 
         @include onMobile {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        @include onLargeMobile {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        @include onExtendedMobile {
             font-size: 20px;
             margin-bottom: 10px;
         }
@@ -1197,6 +1348,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             @include onMobile {
                 font-size: 30px;
             }
+
+            @include onLargeMobile {
+                font-size: 30px;
+            }
+
+            @include onExtendedMobile {
+                font-size: 30px;
+            }
         }
 
         span {
@@ -1210,6 +1369,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             @include onMobile {
                 font-size: 14px;
             }
+
+            @include onLargeMobile {
+                font-size: 16px;
+            }
+
+            @include onExtendedMobile {
+                font-size: 16px;
+            }
         }
 
         a {
@@ -1221,6 +1388,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
             @include onMobile {
                 font-size: 14px;
+            }
+
+            @include onLargeMobile {
+                font-size: 16px;
+            }
+
+            @include onExtendedMobile {
+                font-size: 16px;
             }
         }
     }
@@ -1249,11 +1424,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         }
 
         @include onExtendedMobile {
-            zoom: 0.4;
+            zoom: 0.5;
         }
 
         @include onLargeMobile {
-            zoom: 0.3;
+            zoom: 0.5;
         }
 
         @include onMobile {
@@ -1375,13 +1550,13 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         }
 
         @include onExtendedMobile {
-            zoom: 0.3;
-            margin-bottom: 200px;
+            zoom: 0.5;
+            margin-bottom: 80px;
         }
 
         @include onLargeMobile {
-            zoom: 0.3;
-            margin-bottom: 240px;
+            zoom: 0.5;
+            margin-bottom: 80px;
         }
 
         @include onMobile {
@@ -1636,6 +1811,16 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         padding-bottom: 60px;
     }
 
+    @include onLargeMobile {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @include onExtendedMobile {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
     &_video {
         height: 700px;
         width: 1440px;
@@ -1648,6 +1833,16 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             height: auto;
             width: auto;
         }
+
+        @include onLargeMobile {
+            height: auto;
+            width: auto;
+        }
+
+        @include onExtendedMobile {
+            height: auto;
+            width: auto;
+        }
     }
 
     &_cover {
@@ -1656,6 +1851,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         top: -59px;
 
         @include onMobile {
+            height: 200px;
+            width: 400px;
+            top: -20px;
+        }
+
+        @include onLargeMobile {
+            height: 200px;
+            width: 400px;
+            top: -20px;
+        }
+
+        @include onExtendedMobile {
             height: 200px;
             width: 400px;
             top: -20px;
@@ -1672,6 +1879,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         top: 42%;
 
         @include onMobile {
+            width: 36px;
+            height: 36px;
+            top: 40%;
+        }
+
+        @include onLargeMobile {
+            width: 36px;
+            height: 36px;
+            top: 40%;
+        }
+
+        @include onExtendedMobile {
             width: 36px;
             height: 36px;
             top: 40%;
@@ -1709,6 +1928,24 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         }
     }
 
+    @include onLargeMobile {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        > :nth-last-child(1) {
+            zoom: 1.5;
+        }
+    }
+
+    @include onExtendedMobile {
+        padding-top: 80px;
+        padding-bottom: 80px;
+
+        > :nth-last-child(1) {
+            zoom: 1.5;
+        }
+    }
+
     @include onTablet {
         zoom: 0.55;
     }
@@ -1723,11 +1960,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     }
 
     @include onExtendedMobile {
-        zoom: 0.4;
+        zoom: 0.5;
     }
 
     @include onLargeMobile {
-        zoom: 0.3;
+        zoom: 0.5;
     }
 
     @include onMobile {
@@ -1747,9 +1984,15 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
         @include onLargeMobile {
             flex-direction: column !important;
+            gap: 30px;
         }
 
         @include onMobile {
+            flex-direction: column !important;
+            gap: 30px;
+        }
+
+        @include onExtendedMobile {
             flex-direction: column !important;
             gap: 30px;
         }
@@ -1845,6 +2088,16 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         padding-bottom: 60px;
     }
 
+    @include onLargeMobile {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @include onExtendedMobile {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
     @include onTablet {
         zoom: 0.5;
     }
@@ -1858,11 +2111,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     }
 
     @include onExtendedMobile {
-        zoom: 0.36;
+        zoom: 0.5;
     }
 
     @include onLargeMobile {
-        zoom: 0.4;
+        zoom: 0.5;
     }
 
     @include onMobile {
@@ -1945,14 +2198,16 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
             @include onExtendedMobile {
                 position: absolute;
-                left: 90%;
+                left: 85%;
                 font-size: 20px;
+                width: 100px;
             }
 
             @include onLargeMobile {
                 position: absolute;
-                left: 90%;
+                left: 85%;
                 font-size: 20px;
+                width: 100px;
             }
 
             @include onMobile {
@@ -2007,11 +2262,21 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         }
 
         @include onExtendedMobile {
-            align-self: center;
+            padding-inline: 15px;
+            padding-bottom: 0;
+
+            > :nth-last-child(1) {
+                zoom: 1.4;
+            }
         }
 
         @include onLargeMobile {
-            align-self: center;
+            padding-inline: 15px;
+            padding-bottom: 0;
+
+            > :nth-last-child(1) {
+                zoom: 1.4;
+            }
         }
 
         @include onMobile {
