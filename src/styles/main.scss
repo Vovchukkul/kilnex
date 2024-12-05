@@ -1949,10 +1949,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     &_wrap {
 
-        > :nth-last-child(1) {
-            zoom: 1.5;
+
+        @include onMobile {
+            > :nth-last-child(1) {
+                zoom: 1.5;
+            }
         }
-    
         max-width: 800px;
 
         p {
