@@ -153,28 +153,28 @@ export const Third = () => {
                 <Slider {...settings}>
                     <div className="third_bottom_slide">
                         <Comment />
-                        {windowWidth > 854 && <Comment />}
-                        {windowWidth > 854 && <Comment />}
+                        {windowWidth > 768 && <Comment />}
+                        {windowWidth > 768 && <Comment />}
                     </div>
                     <div className="third_bottom_slide">
                         <Comment />
-                        {windowWidth > 854 && <Comment />}
-                        {windowWidth > 854 && <Comment />}
+                        {windowWidth > 768 && <Comment />}
+                        {windowWidth > 768 && <Comment />}
                     </div>
                     <div className="third_bottom_slide">
                         <Comment />
-                        {windowWidth > 854 && <Comment />}
-                        {windowWidth > 854 && <Comment />}
+                        {windowWidth > 768 && <Comment />}
+                        {windowWidth > 768 && <Comment />}
                     </div>
                     <div className="third_bottom_slide">
                         <Comment />
-                        {windowWidth > 854 && <Comment />}
-                        {windowWidth > 854 && <Comment />}
+                        {windowWidth > 768 && <Comment />}
+                        {windowWidth > 768 && <Comment />}
                     </div>
                     <div className="third_bottom_slide">
                         <Comment />
-                        {windowWidth > 854 && <Comment />}
-                        {windowWidth > 854 && <Comment />}
+                        {windowWidth > 768 && <Comment />}
+                        {windowWidth > 768 && <Comment />}
                     </div>
                 </Slider>
             </div>
