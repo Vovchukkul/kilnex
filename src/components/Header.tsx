@@ -1,7 +1,7 @@
 import '../styles/index.scss'
 import '../styles/main.scss'
 import logo from '../assets/logo_kilnex.svg';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import classNames from 'classnames';
 
 import burger from "../assets/burger.svg"

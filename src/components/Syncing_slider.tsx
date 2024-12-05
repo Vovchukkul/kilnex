@@ -18,7 +18,9 @@ const SyncedSliders = () => {
   const [nav1, setNav1] = useState<Slider | undefined>(undefined);
   const [nav2, setNav2] = useState<Slider | undefined>(undefined);
 
+  // @ts-ignore
   const [isClickedPrev, setIsClickedPrev] = useState(false);
+  // @ts-ignore
   const [isClickedNext, setIsClickedNext] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 

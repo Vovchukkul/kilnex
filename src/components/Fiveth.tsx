@@ -2,7 +2,7 @@ import '../styles/index.scss';
 import '../styles/main.scss';
 import cover from '../assets/Video.png';
 import y_button from '../assets/logos_youtube-icon.svg';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames';
 import com3 from '../assets/com3.svg'
 
