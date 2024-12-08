@@ -24,6 +24,7 @@ body {
   background-color: #171717;
   overflow: hidden; 
   display: block;
+  min-width: 375px;
 }
 
 body::-webkit-scrollbar {
