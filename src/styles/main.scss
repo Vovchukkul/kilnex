@@ -581,6 +581,9 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         font-weight: 700;
         color: transparent;
 
+        // display: inline-block;
+        // text-align: center;
+
         @include onMobile {
             zoom: 1.4;
         }
@@ -1098,6 +1101,8 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     justify-content: space-around;
     gap: 60px;
     border: 1px solid #EB7D01;
+
+    // min-width: 1000px;
 
     @include onMobile {
         justify-content: start;
@@ -1771,6 +1776,9 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             box-sizing: border-box;
             background-size: 490px 486px;
             background-position: -10px -60px;
+
+            // min-width: ;
+            // line-clamp: ;
 
             p {
                 margin-bottom: 30px;
