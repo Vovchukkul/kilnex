@@ -338,13 +338,51 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 }
 
 .adv {
-    background-image: url('../assets/first_image.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 850px;
     padding-top: 170px;
     height: 100vh;
 
+    @include onMobile {
+        background-image: url('../assets/for_mobile.png');
+        padding-top: 16px;
+        background-size: contain;
+        background-position: 10% 80%;
+    }
+
+    @include onLargeMobile {
+        background-size: 85%;
+        background-position: 50% 80%;
+    }
+
+    @include onBigMobile {
+        background-size: 75%;
+        background-position: 50% 80%;
+    }
+
+    @include onSmallTablet {
+        background-size: 65%;
+        background-position: 50% 90%;
+    }
+
+    @include onExtendedTablet {
+        background-image: url('../assets/first_image.svg');
+        background-size: cover;
+        background-position: initial;
+    }
+
+    @include onDesktop {
+        padding-top: 120px;
+        min-height: 650px;
+    }
+
+    @include onBiggestDesktop {
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 170px;
+        height: 100vh;
+        min-height: 800px;
+    }
     // @include onBigTablet {
     //     padding-top: 70px;
     // }
@@ -376,16 +414,17 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     &_left {
         display: flex;
         flex-direction: column;
-        max-width: 800px;
 
-        > :nth-last-child(1) {
-            // @include onMobile {
-            //     zoom: 0.8;
-            // }
+        @include onMobile {
+            max-width: 500px;
+        }
 
-            // @include onExtendedMobile {
-            //     zoom: 1;
-            // }
+        @include onDesktop {
+            max-width: 700px;
+        }
+
+        @include onBiggestDesktop {
+            max-width: 800px;
         }
 
         h1 {
@@ -395,6 +434,37 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             margin-bottom: 24px;
             color: #FFFFFF;
             font-family: $exo_bold, serif;
+
+            @include onMobile {
+                font-size: 18px;
+                line-height: 20px;
+                margin-bottom: 8px;
+            }
+
+            @include onSmallTablet {
+                font-size: 24px;
+                line-height: 30px;
+                margin-bottom: 14px;
+            }
+
+            @include onTablet {
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            @include onDesktop {
+                font-size: 40px;
+                line-height: 40px;
+            }
+
+            @include onBiggestDesktop {
+                line-height: 69px;
+                font-weight: 700;
+                font-size: 46px;
+                margin-bottom: 24px;
+                color: #FFFFFF;
+                font-family: $exo_bold, serif;
+            }
 
             // @include onMobile {
             //     font-size: 40px;
@@ -435,15 +505,29 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         color: #FFFFFF;
         font-family: $exo_normal, serif;
 
-        // @include onMobile {
-        //     font-size: 16px;
-        //     line-height: 20px;
-        // }
+        @include onMobile {
+            font-size: 16px;
+            line-height: 20px;
+        }
 
-        // @include onExtendedMobile {
-        //     font-size: 16px;
-        //     line-height: 20px;
-        // }
+        @include onSmallTablet {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        @include onDesktop {
+            font-size: 28px;
+            line-height: 34px;
+        }
+
+        @include onBiggestDesktop {
+            line-height: 36px;
+            font-weight: 400;
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #FFFFFF;
+            font-family: $exo_normal, serif;
+        }
     }
 
     &_blocks {
@@ -453,9 +537,26 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         gap: 50px;
         margin-bottom: 40px;
 
-        // @include onMobile {
-        //     margin-bottom: 100px;
-        // }
+        @include onMobile {
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        @include onSmallTablet {
+            gap: 14px;
+        }
+
+        @include onDesktop {
+            gap: 30px;
+        }
+
+        @include onBiggestDesktop {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 40px;
+        }
 
         // @include onLargeMobile {
         //     zoom: 0.45;
@@ -489,19 +590,47 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         color: #FFFFFF;
         font-family: $exo_bold ,serif;
 
-        // @include onMobile {
-        //     font-size: 70px;
-        // }
+        @include onMobile {
+            font-size: 20px;
+        }
 
-        // @include onExtendedMobile {
-        //     font-size: 70px;
-        // }
+        @include onSmallTablet {
+            font-size: 58px;
+        }
+
+        @include onDesktop {
+            font-size: 68px;
+        }
+
+        @include onBiggestDesktop {
+            font-weight: 700;
+            font-size: 96px;
+            color: #FFFFFF;
+            font-family: $exo_bold ,serif;    
+        }
     }
 
     &_block {
         display: flex;
         flex-direction: column;
         gap: 12px;
+
+        @include onMobile {
+            flex-direction: row;
+            align-items: center;
+            // justify-content: space-between;
+            gap: 20px;
+        }
+
+        @include onSmallTablet {
+            gap: 0px;
+            flex-direction: column;
+            align-items: baseline;
+        }
+
+        @include onBiggestDesktop {
+            gap: 12px;
+        }
     }
 
     &_price {
@@ -511,9 +640,21 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         position: relative;
         font-family: $exo_bold ,serif;
 
-        // @include onMobile {
-        //     font-size: 40px;
-        // }
+        @include onMobile {
+            font-size: 14px;
+        }
+
+        @include onSmallTablet {
+            font-size: 24px;
+        }
+
+        @include onDesktop {
+            font-size: 28px;
+        }
+
+        @include onBiggestDesktop {
+            font-size: 32px;
+        }
 
         &::after {
             content: "";
@@ -523,6 +664,28 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             bottom: 25px;
             left: -15px;
             background-color: #fff;
+
+            @include onMobile {
+                width: 30px;
+                left: -2px;
+                bottom: 10px;
+            }
+
+            @include onSmallTablet {
+                width: 60px;
+                left: -5px;
+                bottom: 16px;
+            }
+
+            @include onBiggestDesktop {
+                content: "";
+                height: 1px;
+                width: 90px;
+                position: absolute;
+                bottom: 25px;
+                left: -15px;
+                background-color: #fff;    
+            }
         }
     }
 
@@ -540,10 +703,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         // display: inline-block;
         // text-align: center;
 
-        // @include onMobile {
-        //     zoom: 1.4;
-        // }
-        
+        @include onMobile { 
+            width: 120px;
+            height: 24px;
+            font-size: 14px;
+        }
+
+        @include onDesktop {
+            width: 220px;
+            height: 36px;
+            font-size: 20px;
+        }
+
+        @include onBiggestDesktop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00A046;
+            width: 195px;
+            height: 34px;
+            font-size: 20px;
+            font-weight: 700;
+            color: transparent;
+        }
+
         span {
             background-color: #760303;
             background-clip: text;
@@ -2679,6 +2862,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     padding-bottom: 54px;
     padding-top: 10px;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 111px) 100%, 12px 100%, 0 calc(100% - 5px));
+
+    @include onMobile {
+        zoom: 0.56;
+        padding-top: 5px;   
+        padding-bottom: 60px;
+    }
+
+    @include onSmallTablet {
+        zoom: 0.7;
+        padding-top: 10px;
+        padding-bottom: 54px;
+    }
+
+    @include onTablet {
+        zoom: 0.8;
+    }
+
+    @include onDesktop {
+        zoom: 0.9;
+    }
+
+    @include onBiggestDesktop {
+        zoom: 1;
+    }
 
     transition: opacity 0.3s ease;
 
