@@ -102,6 +102,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include onMobile {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
     
     @include onBiggestDesktop {
         padding-top: 14px;
@@ -146,81 +151,12 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     }
 
     nav {
-        @include onBigTablet {
-            display: none;
-        }
-
-        @include onTablet {
-            display: none;
-        }
-
-        @include onSmallTablet {
-            display: none;
-        }
-
-        @include onBigMobile {
-            display: none;
-        }
-
-        @include onExtendedMobile {
-            display: none;
-        }
-
-        @include onLargeMobile {
-            display: none;
-        }
-
         @include onMobile {
             display: none;
         }
 
         @include onBigDesktop {
             display: flex;
-        }
-    }
-
-    &_icon {
-        background-image: url(../assets/burger.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        height: 36px;
-        width: 36px;
-        cursor: pointer;
-
-        @include onSmallTablet {
-            display: block;
-        }
-
-        @include onTablet {
-            display: block;
-        }
-
-        @include onBigTablet {
-            display: block;
-        }
-
-        @include onExtendedTablet {
-            display: none;
-        }
-
-        @include onBigDesktop {
-            display: none;
-        }
-
-        @include onDesktop {
-            display: none;
-        }
-
-        @include onExtendedDesktop {
-            display: none;
-        }
-
-        @include onAverageDesktop {
-            display: none;
-        }
-
-        @include onBiggestDesktop {
-            display: none;
         }
     }
 
@@ -231,20 +167,28 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         gap: 50px;
         list-style: none;
 
+        @include onExtendedTablet {
+            gap: 10px;
+        }
+
+        @include onDesktop {
+            gap: 25px;
+        }
+
         @include onBiggestDesktop {
             gap: 50px;
         }
 
         li {
             text-transform: uppercase;
-            font-size: $plain_text;
+            font-size: var(--plain_text);
             font-weight: 700;
             color: #FFFFFF;
             cursor: pointer;
 
-            @include onBiggestDesktop {
-                font-size: 20px;
-            }
+            // @include onBiggestDesktop {
+            //     font-size: 20px;
+            // }
 
             transition: opacity 0.3s ease;
 
@@ -256,7 +200,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     a {
         color: rgba(0, 160, 70, 1);
-        font-size: $plain_text;
+        font-size: var(--plain_text);
         text-decoration: none;
         font-weight: 700;
 
@@ -359,6 +303,73 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     // height: 100vh;
 
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 170px;
+
+    @include onMobile {
+        background-image: url('../assets/for_mobile.png');
+        padding-top: 16px;
+        background-size: 80%;
+        background-position: 50% 100%;
+        min-height: 600px;
+    }
+
+    // @include onLargeMobile {
+    //     background-size: 70%;
+    // }
+
+    @include onExtendedMobile {
+        min-height: 700px;
+    }
+
+    @include onBigMobile {
+        background-size: 85%;
+        background-position: 50% 100%;
+    }
+
+    @include onSmallTablet {
+        background-size: 65%;
+        background-position: 50% 90%;
+    }
+
+    @include onTablet {
+        min-height: 800px;
+    }
+
+    @include onBigTablet {
+        background-size: 60%;
+    }
+
+    @include onExtendedTablet {
+        background-image: url('../assets/first_image.svg');
+        background-size: cover;
+        background-position: initial;
+        min-height: 500px;
+    }
+
+    @include onBigDesktop {
+        min-width: 100vw;
+        min-height: 650px;
+        padding-top: 80px;
+    }
+
+    @include onDesktop {
+        padding-top: 120px;
+        min-height: 650px;
+    }
+
+    @include onExtendedDesktop {
+        min-height: 750px;
+    }
+
+    @include onBiggestDesktop {
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 170px;
+        min-height: 850px;
+    }
+
     
     @include onMobile {
         padding-top: 20px;
@@ -417,37 +428,48 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             color: #FFFFFF;
             font-family: $exo_bold, serif;
 
-            // @include onMobile {
-            //     font-size: 40px;
-            // }
+            @include onMobile {
+                font-size: 20px;
+                line-height: 20px;
+            }
 
-            // @include onLargeMobile {
-            //     font-size: 36px;
-            // }
-            
-            // @include onExtendedMobile {
-            //     zoom: 0.7;
-            // }
+            @include onBigMobile {
+                font-size: 22px;
+                line-height: 22px;
+                max-width: 400px;
+            }
 
-            // @include onSmallTablet {
-            //     zoom: 0.7;
-            // }
+            @include onSmallTablet {
+                font-size: 24px;
+                line-height: 24px;
+                max-width: 400px;
+            }
 
-            // @include onBigMobile {
-            //     zoom: 0.7;
-            // }
+            @include onBigTablet {
+                font-size: 28px;
+                max-width: 500px;
+                line-height: 30px;
+            }
 
-            // @include onTablet {
-            //     zoom: 0.8;
-            //     max-width: 700px;
-            // }
+            @include onBigDesktop {
+                font-size: 32px;
+                line-height: 36px;
+            }
 
-            // @include onBigMobile {
-            //     zoom: 0.6;
-            // }
+            @include onDesktop {
+                font-size: 34px;
+                line-height: 38px;
+                max-width: 700px;
+            }
+
+            @include onExtendedDesktop {
+                font-size: 38px;
+                line-height: 40px;
+            }
 
             @include onBiggestDesktop {
                 font-size: 46px;
+                line-height: 69px;
                 zoom: 1;
                 max-width: 800px;
             }
@@ -457,7 +479,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     &_sub {
         line-height: 36px;
         font-weight: 400;
-        font-size: $big_sub;
+        font-size: var(--big_sub);
         margin-bottom: 30px;
         color: #FFFFFF;
         font-family: $exo_normal, serif;
@@ -466,8 +488,26 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             line-height: 20px;
         }
 
+        @include onBigMobile {
+            max-width: 400px;
+        }
+
+        
         @include onExtendedMobile {
             line-height: 20px;
+        }
+        
+        @include onSmallTablet {
+            max-width: 500px;
+            line-height: 24px;
+        }
+
+        @include onBigDesktop {
+            max-width: 700px;
+        }
+
+        @include onDesktop {
+            line-height: 30px;
         }
 
         @include onBiggestDesktop {
@@ -483,29 +523,15 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         margin-bottom: 40px;
 
         @include onMobile {
-            margin-bottom: 100px;
+            gap: 20px;
         }
-
-        @include onLargeMobile {
-            zoom: 0.45;
-        }
-        
-        @include onExtendedMobile {
-            zoom: 0.7;
-        }
-
-        @include onBigMobile {
-            zoom: 0.6;
-        }
-
-        @include onSmallTablet {
-            zoom: 0.7;
-        }
-
 
         @include onTablet {
-            zoom: 0.8;
-            max-width: 700px;
+            gap: 35px;
+        }
+
+        @include onBigDesktop {
+            gap: 50px;
         }
 
         @include onBiggestDesktop {
@@ -517,7 +543,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 
     &_offer {
         font-weight: 700;
-        font-size: $offer;
+        font-size: var(--offer);
         color: #FFFFFF;
         font-family: $exo_bold ,serif;
     }
@@ -536,7 +562,19 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         font-family: $exo_bold ,serif;
 
         @include onMobile {
-            font-size: 40px;
+            font-size: 16px;
+        }
+
+        @include onSmallTablet {
+            font-size: 20px;
+        }
+
+        @include onDesktop {
+            font-size: 26px;
+        }
+
+        @include onBiggestDesktop {
+            font-size: 32px;
         }
 
         &::after {
@@ -547,6 +585,30 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             bottom: 25px;
             left: -15px;
             background-color: #fff;
+
+            @include onMobile {
+                width: 40px;
+                left: -5px;
+                bottom: 10px;
+            }
+
+            @include onSmallTablet {
+                width: 60px;
+                left: -10px;
+                bottom: 13px;
+            }
+
+            @include onDesktop {
+                width: 80px;
+                left: -14px;
+                bottom: 16px;
+            }
+
+            @include onBiggestDesktop {
+                width: 90px;
+                bottom: 23px;
+                left: -15px;
+            }
         }
     }
 
@@ -557,16 +619,29 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         background-color: #00A046;
         width: 195px;
         height: 34px;
-        font-size: $plain_text;
+        font-size: var(--plain_text);
         font-weight: 700;
         color: transparent;
+        text-transform: uppercase;
 
-        // @include onMobile {
-        //     zoom: 1.4;
-        // }
+        @include onMobile {
+            zoom: 0.5;
+        }
 
-        display: inline-block;
-        text-align: center;
+        @include onBigMobile {
+            zoom: 0.6;
+        }
+
+        @include onTablet {
+            zoom: 0.8;
+        }
+
+        @include onExtendedTablet {
+            zoom: 1;
+        }
+
+        // display: inline-block;
+        // text-align: center;
         
         span {
             background-color: #760303;
@@ -649,79 +724,26 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         gap: 40px;
         margin-bottom: 114px;
 
-        // @include onMobile {
-        //     flex-direction: column;
-        //     margin: 0 auto;
+        @include onMobile {
+            flex-direction: column;
+            margin: 0 auto;
 
-        //     > :nth-child(1) {
-        //         > :nth-child(1) {
-        //             flex-direction: column;
-        //         }
-        //     }
-        // }
-        // @include onLargeMobile {
-        //     flex-direction: column;
-        //     margin: 0 auto;
+            > :nth-child(1) {
+                > :nth-child(1) {
+                    flex-direction: column;
+                }
+            }
+        }
 
-        //     > :nth-child(1) {
-        //         > :nth-child(1) {
-        //             flex-direction: column;
-        //         }
-        //     }
-        // }
-        // @include onExtendedMobile {
-        //     flex-direction: column;
-        //     margin: 0 auto;
+        @include onBigDesktop {
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+        }
 
-        //     > :nth-child(1) {
-        //         > :nth-child(1) {
-        //             flex-direction: column;
-        //         }
-        //     }
-        // }
-        // @include onBigMobile {
-        //     flex-direction: column;
-        //     margin: 0 auto;
-
-        //     > :nth-child(1) {
-        //         > :nth-child(1) {
-        //             flex-direction: column;
-        //         }
-        //     }
-        // }
-
-        // @include onSmallTablet {
-        //     flex-direction: column;
-        //     margin: 0 auto;
-
-        //     > :nth-child(1) {
-        //         > :nth-child(1) {
-        //             flex-direction: column;
-        //         }
-        //     }
-        // }
-
-        // @include onTablet {
-        //     flex-direction: column;
-        //     margin: 0 auto;
-
-        //     > :nth-child(1) {
-        //         > :nth-child(1) {
-        //             flex-direction: column;
-        //         }
-        //     }
-        // }
-
-        // @include onBigTablet {
-        //     flex-direction: column;
-        //     margin: 0 auto;
-
-        //     > :nth-child(1) {
-        //         > :nth-child(1) {
-        //             flex-direction: column;
-        //         }
-        //     }
-        // }
+        @include onBiggestDesktop {
+            gap: 40px;
+        }
     }
 }
 
@@ -769,25 +791,37 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 .s {
     @include onMobile {
         align-self: start;
+        zoom: 0.36;
     }
     @include onLargeMobile {
         align-self: start;
+        zoom: 0.5;
     }
     @include onExtendedMobile {
         align-self: start;
     }
     @include onBigMobile {
         align-self: start;
+        zoom: 0.6;
     }
     @include onTablet {
         align-self: start;
+        zoom: 0.7;
     }
     @include onBigTablet {
         align-self: start;
     }
 
-    @include onBigTablet {
-        align-self: start;
+    @include onBigDesktop {
+        zoom: 0.6;
+    }
+
+    @include onDesktop {
+        zoom: 0.8;
+    }
+
+    @include onBiggestDesktop {
+        zoom: 1;
     }
 
     // @include onTablet {
@@ -848,12 +882,40 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     max-width: 580px;
 
     h2 {
-        font-size: $headers;
+        font-size: var(--headers);
         font-weight: 700;
         line-height: 48px;
         margin-bottom: 10px;
         font-family: $exo-bold;
         color: #FFFFFF;
+
+        @include onMobile {
+            max-width: 300px;
+            line-height: 20px;
+        }
+
+        @include onExtendedMobile {
+            max-width: 350px;
+        }
+
+        @include onBigMobile {
+            max-width: 400px;
+        }
+
+        @include onTablet {
+            max-width: 500px;
+            line-height: 30px;
+        }
+
+        @include onBiggestDesktop {
+            font-size: var(--headers);
+            font-weight: 700;
+            line-height: 48px;
+            margin-bottom: 10px;
+            font-family: $exo-bold;
+            color: #FFFFFF;    
+            max-width: 580px;
+        }
     }
 }
 
@@ -864,12 +926,19 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     align-items: center;
     margin-bottom: 42px;
 
-    // @include onMobile {
-    //     flex-direction: column;
-    //     justify-content: start;
-    //     align-items: start;
-    //     gap: 10px
-    // }
+    @include onMobile {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 10px
+    }
+
+
+    @include onBiggestDesktop {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+    }
 
     > :nth-child(1) {
         font-size: 16px;
@@ -913,9 +982,20 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     align-items: center;
     margin-bottom: 10px;
 
-    // @include onMobile {
-    //     max-width: 480px;
-    // }
+    @include onMobile {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    @include onExtendedMobile {
+        flex-direction: row;
+        max-width: 450px;
+        align-items: center;
+    }
+
+    @include onBigDesktop {
+        justify-content: space-between;
+    }
 
     .second_wrap {
         display: flex;
@@ -952,16 +1032,42 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         display: flex;
         align-items: center;
         gap: 13px;
+
+        @include onMobile {
+            gap: 6px;
+        }
+
+        @include onBigDesktop {
+            gap: 13px;
+        }
     
-        .second_item {
+        .second_icon {
             width: 30px;
             height: 30px;
+
+            @include onMobile {
+                width: 18px;
+                height: 18px;
+            }
+
+            @include onBigDesktop {
+                width: 30px;
+                height: 30px;
+            }
         }
     
         span {
             font-size: 18px;
             font-weight: 400;
             color: #EB7D01;
+
+            @include onMobile {
+                font-size: 16px;
+            }
+
+            @include onBigDesktop {
+                font-size: 18px;
+            }
         }
     }
 }
@@ -984,14 +1090,18 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 }
 
 .second_sub {
-    font-size: 18px;
+    font-size: var(--sub);
     font-weight: 400;
     color: #FFFFFF;
     line-height: 27px;
     margin-bottom: 30px;
 
     @include onMobile {
-        max-width: 480px;
+        max-width: 300px;
+    }
+
+    @include onExtendedMobile {
+        max-width: 450px;
     }
 }
 
@@ -1006,14 +1116,19 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     left: 36px;
     margin-bottom: 40px;
 
-    // @include onMobile {
-    //     max-width: 500px;
-    //     margin-bottom: 90px;
-    // }
+    @include onMobile {
+        max-width: 500px;
+        margin-bottom: 90px;
+    }
+
+    @include onBiggestDesktop {
+        max-width: 580px;
+        margin-bottom: 50px;
+    }
 
     li {
         width: 260px;
-        font-size: 18px;
+        font-size: var(--sub);
         font-weight: 400;
         color: #FFFFFF;
         position: relative;
@@ -1058,6 +1173,24 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     justify-content: space-around;
     gap: 60px;
     border: 1px solid #EB7D01;
+
+    @include onMobile {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 20px;
+    }
+
+    @include onBigTablet {
+        flex-direction: row;
+        min-height: 700px;
+    }
+
+    @include onBigDesktop {
+        // min-height: 850px;
+        // min-width: 100%; 
+    }
+
+    // min-width: 1000px;
 
     // @include onMobile {
     //     justify-content: start;
@@ -1119,6 +1252,17 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         flex-direction: column;
         gap: 148px;
 
+        @include onMobile {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include onBigTablet {
+            flex-direction: column;
+            gap: 50px;
+            padding-bottom: 20px;
+        }
+
         // @include onTablet {
         //     flex-direction: row;
         // }   
@@ -1128,6 +1272,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             flex-direction: column;
             gap: 40px;
             width: 255px;
+
+            @include onMobile {
+                gap: 15px;
+            }
+
+            @include onBigDesktop {
+                gap: 40px;
+            }
 
             // @include onMobile {
             //     gap: 20px;
@@ -1153,6 +1305,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 cursor: pointer;
                 color: #FFFFFF;
 
+                @include onMobile {
+                    font-size: 16px;
+                }
+
+                @include onBigDesktop {
+                    font-size: 20px;
+                }
+
                 // @include onMobile {
                 //     font-size: 12px;
                 // }
@@ -1171,9 +1331,20 @@ $exo_semi-bold: "Exo-semi-bold", serif;
             width: 255px;
             height: 255px;
 
-            // @include onMobile {
-            //     display: none;
-            // }
+            @include onMobile {
+                display: none;
+            }
+
+            @include onExtendedMobile {
+                display: block;
+                width: 140px;
+                height: 140px;
+            }
+
+            @include onSmallTablet {
+                width: 180px;
+                height: 180px;
+            }
 
             // @include onLargeMobile {
             //     display: none;
@@ -1204,6 +1375,22 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     &_rg {
         max-width: 945px;
 
+        @include onBigTablet {
+            min-width: 456px;
+        }
+
+        @include onExtendedTablet {
+            min-width: 626px;
+        }
+
+        @include onBigDesktop {
+            min-width: 602px;
+        }
+
+        @include onBiggestDesktop {
+            min-width: 1000px;
+        }
+
         p {
             line-height: 20px;
         
@@ -1213,6 +1400,14 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 color: #FFFFFF;
                 font-family: $exo-bold;
                 text-transform: uppercase;
+
+                @include onMobile {
+                    font-size: 16px;
+                }
+
+                @include onBigDesktop {
+                    font-size: 20px;
+                }
 
                 // @include onMobile {
                 //     font-size: 14px;
@@ -1226,6 +1421,16 @@ $exo_semi-bold: "Exo-semi-bold", serif;
                 color: #FFFFFF;
                 line-height: 27px;
 
+                @include onMobile {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+
+                @include onBigDesktop {
+                    font-size: 18px;
+                    line-height: 27px;
+                }
+
                 // @include onMobile {
                 //     font-size: 12px;
                 //     line-height: 15px;
@@ -1236,11 +1441,11 @@ $exo_semi-bold: "Exo-semi-bold", serif;
 }
 
 .product_wrap {
-    // @include onBigTablet {
-    //     width: 100%;
-    //     display: flex;
-    //     justify-content: center;
-    // }
+    @include onBigTablet {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .line {
@@ -1248,6 +1453,16 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     height: 583px;
     background-color: #EB7D01;
     display: block;
+
+    @include onMobile {
+        width: 100%;
+        height: 1px;
+    }
+
+    @include onBigTablet {
+        width: 2px;
+        height: 627px;
+    }
 
     // @include onBigTablet {
     //     height: 1px;
@@ -1284,7 +1499,6 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     //     width: 100%;
     // }
 }
-
 .com3 {
     width: 100vw;
     margin-bottom: 150px;
@@ -1320,7 +1534,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
     align-items: start;
 
     h2 {
-        font-size: $headers;
+        font-size: var(--headers);
         font-weight: 700;
         color: #FFFFFF;
         font-family: $exo_bold;
@@ -1397,7 +1611,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         align-items: center;
 
         p {
-            font-size: $offer;
+            font-size: var(--offer);
             font-weight: 700;
             color: #FFFFFF;
             font-family: $exo_bold;
@@ -1415,7 +1629,7 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         }
 
         a {
-            font-size: $big_sub;
+            font-size: var(--big_sub);
             font-weight: 400;
             color: #FFFFFF;
             text-decoration: underline;
@@ -2566,6 +2780,35 @@ $exo_semi-bold: "Exo-semi-bold", serif;
         opacity: 0.8; 
         border-color: #EB7D01;
     }
+
+    @include onMobile {
+        zoom: 0.6;
+        padding-top: 0px;   
+        padding-bottom: 67px;
+    }
+
+    @include onExtendedMobile {
+        padding-top: 8px;
+        padding-bottom: 58px;
+    }
+
+    @include onSmallTablet {
+        zoom: 0.7;
+        padding-top: 10px;
+        padding-bottom: 54px;
+    }
+
+    @include onTablet {
+        zoom: 0.8;
+    }
+
+    @include onDesktop {
+        zoom: 0.9;
+    }
+
+    @include onBiggestDesktop {
+        zoom: 1;
+    }
 }
 
 .wrap {
@@ -2912,3 +3155,9 @@ footer {
 .product_slider {
     width: 100%;
 }
+
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+  

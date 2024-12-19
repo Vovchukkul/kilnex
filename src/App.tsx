@@ -19,6 +19,11 @@ function App() {
 
   const handleClick = () => {
     setIsShowNav(!isShowNav)
+    if (!isShowNav) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
   }
 
   return (

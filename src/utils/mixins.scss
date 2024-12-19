@@ -322,63 +322,84 @@
       }
     }
   }
-
-
-  $headers: 32px;
-  $plain_text: 20px;
-  $sub: 18px;
-  $big_sub: 24px;
-  $offer: 96px;
+  :root {
+    --offer: 96px;
+    --headers: 32px;
+    --plain_text: 20px;
+    --sub: 18px;
+    --big_sub: 24px;
+  }
   
   @include onMobile {
-    $offer: 20px;
-    $headers: 18px;
-    $big_sub: 16px;
-    $sub: 16px;
+    :root {
+      --offer: 26px;
+      --headers: 18px;
+      --big_sub: 16px;
+      --sub: 16px;
+    }
   }
   
   @include onBigMobile {
-    $headers: 22px;
+    :root {
+      --headers: 22px;
+      --offer: 32px;
+    }
   }
   
   @include onSmallTablet {
-    $offer: 58px;
-    $sub: 20px;
-    $headers: 24px;
-    $big_sub: 20px;
+    :root {
+      --offer: 58px;
+      --sub: 20px;
+      --headers: 24px;
+      --big_sub: 20px;
+    }
   }
   
   @include onTablet {
-    $headers: 28px;
+    :root {
+      --headers: 28px;
+    }
   }
   
   @include onExtendedTablet {
-    $plain_text: 14px;
+    :root {
+      --plain_text: 18px;
+    }
   }
   
   @include onBigDesktop {
-    $plain_text: 16px;
-    $headers: 28px;
-    $sub: 18px;
+    :root {
+      --plain_text: 16px;
+      --headers: 28px;
+      --sub: 18px;
+    }
   }
   
   @include onDesktop {
-    $offer: 68px;
-    $big_sub: 28px;
+    :root {
+      --offer: 68px;
+      --big_sub: 28px;
+    }
   }
   
   @include onExtendedDesktop {
-    $plain_text: 18px;
+    :root {
+      --plain_text: 18px;
+    }
   }
   
   @include onBiggestDesktop {
-    $headers: 32px;
-    $plain_text: 20px;
-    $sub: 18px;
-    $big_sub: 24px;
-    $offer: 20px;
+    :root {
+      --headers: 32px;
+      --plain_text: 20px;
+      --sub: 18px;
+      --big_sub: 24px;
+      --offer: 96px;
+    }
   }
   
   @include onFullHD {
-    $plain_text: 24px;
+    :root {
+      --plain_text: 24px;
+    }
   }
