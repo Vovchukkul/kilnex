@@ -2,10 +2,6 @@ import '../styles/index.scss'
 import '../styles/main.scss'
 import logo from '../assets/logo_kilnex.svg';
 import { Link } from 'react-scroll';
-import classNames from 'classnames';
-
-import burger from "../assets/burger.svg"
-import close from "../assets/close.svg"
 import { Burger } from './Burger';
 
 type Props = {
