@@ -1,299 +1,67 @@
-@import "../utils/mixins.scss";
 
-.slider-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+.slick-arrow::before {
+    display: none;
+}
 
-    @include onMobile {
-        gap: 10px;
+.slick-prev {
+    img {
+        position: relative;
     }
+}
 
-    @include onBigMobile {
-        flex-direction: row-reverse;
-        align-self: flex-start;
+.slick-next {
+    img {
+        position: relative;
+        top: 360px;
     }
+}
 
-    @include onExtendedTablet {
-        flex-direction: row-reverse;
-        align-self: flex-start;
+.slick-slide {
+    img {
+        width: 100px !important; 
+        height: 100px;
+        border-radius: 0px !important;
     }
+}
 
-    @include onBigDesktop {
-        flex-direction: column;
-        align-self: flex-start;
-        gap: 10px;
-    }
-
-    @include onDesktop {
-        flex-direction: row-reverse;
-        align-self: flex-start;
-        gap: 15px;
-    }
-
-    @include onExtendedDesktop {
-        gap: 20px;
-    }
-  }
-  
-  .main-slider {
-    position: relative;
-    width: 700px;
-    height: 700px;
-    overflow: hidden;
-    border-radius: 8px;
-
-    @include onMobile {
-        height: auto;
-        width: 100%;
-    }
-
-    // @include onBigMobile {
-    //     width: 441px;
-    //     height: 441px;
-    // }
-
-    @include onExtendedTablet {
-        width: 400px;
-        height: 400px;
-    }
-
-    @include onBigDesktop {
-        width: 500px;
-        height: 500px;
-    }
-
-    @include onDesktop {
-        width: 600px;
-        height: 600px;
-    }
-
-    @include onBiggestDesktop {
+@for $i from 0 through 5 {
+    div[data-index="#{$i}"] {
         width: 700px;
         height: 700px;
-    }
-  }
-  
-  .slider-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slide {
-    min-width: 100%;
-    height: 100%;
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    font-size: 20px;
-    z-index: 10;
-
-    @include onMobile {
-        display: none;
-    }
-
-    @include onExtendedTablet {
-        display: block;
-    }
-  }
-  
-  .arrow-prev {
-    left: 28px;
-    top: -30px;
-    background-color: transparent;
-
-    @include onMobile {
-        transform: rotate(-90deg);
-    }
-
-    @include onExtendedTablet {
-        transform: rotate(0deg);
-        left: 8px;
-        top: -40px;
-    }
-
-    @include onBigDesktop {
-        left: -35px;
-        top: 20%;
-        transform: rotate(-90deg);
-    }
-
-    @include onDesktop {
-        left: 25%;
-        top: -50px;
-        transform: rotate(0deg);
-    }
-
-    @include onBiggestDesktop {
-        left: 27%;
-    }
-  }
-  
-  .arrow-next {
-    right: 26px;
-    top: 100%;
-    background-color: transparent;
-
-    @include onMobile {
-        transform: rotate(90deg);
-    }
-
-    @include onExtendedTablet {
-        transform: rotate(180deg);
-        right: 8px;
-        top: 400px;
-    }
-
-    @include onBigDesktop {
-        right: -35px;
-        top: 20%;
-        transform: rotate(90deg);
-    }
     
-    @include onDesktop {
-        transform: rotate(180deg);
-        right: 25%;
-        top: 600px;
-    }
+        img {
+            width: 100% !important;
+            height: 100%;
+        }
+    }    
+}
 
-    @include onBiggestDesktop {
-        right: 27%;
-        top: 700px;
-    }
-  } 
-  
-  .nav-slider {
+.slick-vertical {
+    height: 768px;
+}
+
+.slick-list {
+    height: 700px !important;
     display: flex;
-    justify-content: center;
     gap: 20px;
-    position: relative;
+}
 
-    @include onMobile {
-        width: 100%;
-        height: auto;
-        gap: 4px;
-    }   
-
-    @include onBigMobile {
-        flex-direction: column;
-        width: auto;
-        gap: 11px;
-        align-self: flex-start;
-    }
-
-    @include onSmallTablet {
-        gap: 10px;
-    }
-
-    @include onBigTablet {
-        flex-direction: column;
-        width: auto;
-        gap: 9px;
-    }
-
-    @include onBigTablet {
-        gap: 16px;
-    }
-
-    @include onExtendedTablet {
-        flex-direction: column;
-        width: auto;
-        gap: 9px;
-    }
-
-    @include onBigDesktop {
-        flex-direction: row;
-        gap: 6px;
-        width: auto;
-        align-self: center;
-    }
-
-    @include onDesktop {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    @include onBiggestDesktop {
-        gap: 20px;
-    }
-  }
-  
-  .thumbnail {
-    width: 100px;
-    height: 100px;
+.slick-prev {
+    display: block;
     cursor: pointer;
-    border-radius: 4px;
-    overflow: hidden;
-    border: 2px solid transparent;
-    transition: border 0.3s;
+    position: absolute;
+    left: -50%;
+    transform: translateX(-50%);
+}
 
-    @include onMobile {
-        width: 100%;
-        height: auto;
+.slick-next {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+    
+    img {
+        top: 380px;
     }
-
-    @include onBigMobile {
-        width: 65px;
-        height: 65px;
-    }
-
-    @include onSmallTablet {
-        width: 75px;
-        height: 75px;
-    }
-
-    @include onTablet {
-        width: 90px;
-        height: 90px;
-    }
-
-    @include onBigTablet {
-        width: 100px;
-    }
-
-    @include onExtendedTablet {
-        width: 60px;
-        height: 60px;
-    }
-
-    @include onBigDesktop {
-        width: 70px;
-        height: 70px;
-    }
-
-    @include onDesktop {
-        width: 90px;
-        height: 90px;
-    }
-
-    @include onBiggestDesktop {
-        width: 100px;
-        height: 100px;
-    }
-  }
-  
-  .thumbnail.active {
-    border-color: #EB7D01;
-  }
-  
-  .thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+}
