@@ -1,0 +1,106 @@
+@import "../utils/mixins.scss";
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    // width: 1000px;
+    width: 100%;
+}
+
+.sliderWrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+
+    @include onExtendedDesktop {
+        max-width: 1300px;
+    }
+}
+
+.sliderTrack {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.sliderSlide {
+    min-width: 100%;
+    max-width: 100px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include onExtendedDesktop {
+        gap: 20px;
+    }
+
+    @include onBiggestDesktop {
+        max-width: 150px;
+    }
+}
+
+.sliderControl {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.sliderWrapper {
+    display: flex;
+    overflow: hidden;
+    cursor: grab;
+}
+
+.sliderSlide {
+    flex: 0 0 100%;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.sliderWrapper:active {
+    cursor: grabbing;
+}
+
+.dots {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #EB7D01;
+        border-radius: 50%;
+        background: #000;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .active {
+        background: #EB7D01;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+    }
+}

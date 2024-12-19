@@ -7,8 +7,6 @@ type Props = {
 }
 
 export const Burger: React.FC<Props> = ({ isOpen, click }) => {
-//   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => {
     click()
   };

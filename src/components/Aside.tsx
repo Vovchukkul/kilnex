@@ -8,7 +8,7 @@ type Props = {
 
 export const Aside: React.FC<Props> = ({ click }) => {
     return (
-        <div className="aside container">
+        <div id="aside" className="aside container">
             <nav>
                 <ul>
                     <Link to="product" smooth={true} duration={500}>

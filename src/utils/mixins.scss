@@ -34,42 +34,6 @@
   }
 }
 
-// @mixin onMobile {
-//   @media (min-width: 375px) and (max-width: 400px) {
-//     @content;
-//   }
-// }
-
-// @mixin onLargeMobile {
-//   @media (min-width: 400px) and (max-width: 510px) {
-//     @content;
-//   }
-// }
-
-// @mixin onExtendedMobile {
-//   @media (min-width: 510px) and (max-width: 576px) {
-//     @content;
-//   }
-// }
-
-// @mixin onBigMobile {
-//   @media (min-width: 576px) and (max-width: 640px) {
-//     @content;
-//   }
-// }
-
-// @mixin onSmallTablet {
-//   @media (min-width: 640px) and (max-width: 768px) {
-//     @content;
-//   }
-// }
-
-// @mixin onTablet {
-//   @media (min-width: 768px) and (max-width: 854px) {
-//     @content;
-//   }
-// }
-
 @mixin onBigTablet {
   @media (min-width: 854px) {
     @content;
@@ -321,4 +285,63 @@
       border: $border;
     }
   }
+}
+
+$headers: 32px;
+$plain_text: 20px;
+$sub: 18px;
+$big_sub: 24px;
+$offer: 20px;
+
+@include onMobile {
+  $offer: 20px;
+  $headers: 18px;
+  $big_sub: 16px;
+  $sub: 16px;
+}
+
+@include onBigMobile {
+  $headers: 22px;
+}
+
+@include onSmallTablet {
+  $offer: 58px;
+  $sub: 20px;
+  $headers: 24px;
+  $big_sub: 20px;
+}
+
+@include onTablet {
+  $headers: 28px;
+}
+
+@include onExtendedTablet {
+  $plain_text: 14px;
+}
+
+@include onBigDesktop {
+  $plain_text: 16px;
+  $headers: 28px;
+  $sub: 18px;
+}
+
+@include onDesktop {
+  $offer: 68px;
+  $big_sub: 28px;
+}
+
+@include onExtendedDesktop {
+  $plain_text: 18px;
+}
+
+@include onBiggestDesktop {
+  $headers: 32px;
+  $plain_text: 20px;
+  $sub: 18px;
+  $big_sub: 24px;
+  $offer: 20px;
+}
+
+@include onFullHD {
+  $plain_text: 24px;
 }

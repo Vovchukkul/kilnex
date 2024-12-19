@@ -19,7 +19,7 @@ export const SixBlock: React.FC<Props> = ({ h3, p, array_of_li, img}) => {
                 </p>
                 <ul>
                     {array_of_li.map((li) => (
-                        <li>{li}</li>
+                        <li key={li}>{li}</li>
                     ))}
                 </ul>
             </div>

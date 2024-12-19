@@ -3,7 +3,6 @@ import { useState } from 'react';
 import "../styles/index.scss";
 import "../styles/main.scss";
 
-
 export const ProductView = () => {
     const [currentFrame, setCurrentFrame] = useState(1);
     const [dragOffset, setDragOffset] = useState(0); 
@@ -13,6 +12,7 @@ export const ProductView = () => {
     const handleDrag = (event: { movementX: any; }) => {
         const movement = event.movementX; 
         setDragOffset((prev) => prev + movement); 
+        console.log("move")
 
         if (Math.abs(dragOffset + movement) >= threshold) {
             const direction = dragOffset + movement > 0 ? 1 : -1; 
@@ -34,10 +34,11 @@ export const ProductView = () => {
             style={{ cursor: 'grab', overflow: 'hidden' }}
         >
             <img
-                src={`/assets/360/image-${currentFrame}.jpg`}
+                src={`/kilnex/assets/360/image-${currentFrame}.jpg`}
                 alt={`Frame ${currentFrame}`}
                 style={{ width: '100%' }}
             />
         </div>
     );
 };
+
