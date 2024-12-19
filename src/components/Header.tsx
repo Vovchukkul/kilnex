@@ -6,6 +6,7 @@ import classNames from 'classnames';
 
 import burger from "../assets/burger.svg"
 import close from "../assets/close.svg"
+import { Burger } from './Burger';
 
 type Props = {
     click: () => void,
@@ -38,10 +39,10 @@ export const Header: React.FC<Props> = ({ click, isShowNav }) => {
                     </Link>
                 </ul>
             </nav>
-            <div style={{
+            {/* <div style={{
                 backgroundImage: `url(${isShowNav ? close : burger})` 
-            }} className={classNames("header_icon")} onClick={() => click()}></div>
-
+            }} className={classNames("header_icon")} onClick={() => click()}></div> */}
+            <Burger click={click} isOpen={isShowNav} />
             <a className='header_link' href="tel:11234567890">+1(123)456-7890</a>
         </header>
     )

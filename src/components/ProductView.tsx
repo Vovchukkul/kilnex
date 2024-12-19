@@ -34,7 +34,7 @@ export const ProductView = () => {
             style={{ cursor: 'grab', overflow: 'hidden' }}
         >
             <img
-                src={`/assets/360/image-${currentFrame}.jpg`}
+                src={`/kilnex/assets/360/image-${currentFrame}.jpg`}
                 alt={`Frame ${currentFrame}`}
                 style={{ width: '100%' }}
             />

@@ -1,98 +1,194 @@
+// @mixin onMobile {
+//     @media (min-width: 375px) and (max-width: 400px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onLargeMobile {
+//     @media (min-width: 400px) and (max-width: 510px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onExtendedMobile {
+//     @media (min-width: 510px) and (max-width: 576px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onBigMobile {
+//     @media (min-width: 576px) and (max-width: 640px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onSmallTablet {
+//     @media (min-width: 640px) and (max-width: 768px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onTablet {
+//     @media (min-width: 768px) and (max-width: 854px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onBigTablet {
+//     @media (min-width: 854px) and (max-width: 991px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onExtendedTablet {
+//     @media (min-width: 991px) and (max-width: 1200px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onBigDesktop {
+//     @media (min-width: 1199px) and (max-width: 1440px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onDesktop {
+//     @media (min-width: 1440px) and (max-width: 1600px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onExtendedDesktop {
+//     @media (min-width: 1600px) and (max-width: 1800px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onAverageDesktop {
+//     @media (min-width: 1800px) and (max-width: 1920px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onBiggestDesktop {
+//     @media (min-width: 1912px) and (max-width: 2556px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onBiggestScreen {
+//     @media (max-width: 2000px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onBiggestScreen2 {
+//     @media (max-width: 2250px) {
+//       @content;
+//     }
+//   }
+  
+//   @mixin onFullHD {
+//     @media (min-width: 2000px) and (max-width: 2560px) {
+//       @content;
+//     }
+//   }
+
 @mixin onMobile {
-    @media (min-width: 375px) and (max-width: 400px) {
-      @content;
-    }
+  @media (min-width: 375px) {
+    @content;
   }
-  
-  @mixin onLargeMobile {
-    @media (min-width: 400px) and (max-width: 510px) {
-      @content;
-    }
+}
+
+@mixin onLargeMobile {
+  @media (min-width: 400px)  {
+    @content;
   }
-  
-  @mixin onExtendedMobile {
-    @media (min-width: 510px) and (max-width: 576px) {
-      @content;
-    }
+}
+
+@mixin onExtendedMobile {
+  @media (min-width: 510px) {
+    @content;
   }
-  
-  @mixin onBigMobile {
-    @media (min-width: 576px) and (max-width: 640px) {
-      @content;
-    }
+}
+
+@mixin onBigMobile {
+  @media (min-width: 576px) {
+    @content;
   }
-  
-  @mixin onSmallTablet {
-    @media (min-width: 640px) and (max-width: 768px) {
-      @content;
-    }
+}
+
+@mixin onSmallTablet {
+  @media (min-width: 640px) {
+    @content;
   }
-  
-  @mixin onTablet {
-    @media (min-width: 768px) and (max-width: 854px) {
-      @content;
-    }
+}
+
+@mixin onTablet {
+  @media (min-width: 768px) {
+    @content;
   }
-  
-  @mixin onBigTablet {
-    @media (min-width: 854px) and (max-width: 991px) {
-      @content;
-    }
+}
+
+@mixin onBigTablet {
+  @media (min-width: 854px) {
+    @content;
   }
-  
-  @mixin onExtendedTablet {
-    @media (min-width: 991px) and (max-width: 1200px) {
-      @content;
-    }
+}
+
+@mixin onExtendedTablet {
+  @media (min-width: 991px) {
+    @content;
   }
-  
-  @mixin onBigDesktop {
-    @media (min-width: 1199px) and (max-width: 1440px) {
-      @content;
-    }
+}
+
+@mixin onBigDesktop {
+  @media (min-width: 1199px) {
+    @content;
   }
-  
-  @mixin onDesktop {
-    @media (min-width: 1440px) and (max-width: 1600px) {
-      @content;
-    }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1440px) {
+    @content;
   }
-  
-  @mixin onExtendedDesktop {
-    @media (min-width: 1600px) and (max-width: 1800px) {
-      @content;
-    }
+}
+
+@mixin onExtendedDesktop {
+  @media (min-width: 1600px) {
+    @content;
   }
-  
-  @mixin onAverageDesktop {
-    @media (min-width: 1800px) and (max-width: 1920px) {
-      @content;
-    }
+}
+
+@mixin onAverageDesktop {
+  @media (min-width: 1800px) {
+    @content;
   }
-  
-  @mixin onBiggestDesktop {
-    @media (min-width: 1912px) and (max-width: 2556px) {
-      @content;
-    }
+}
+
+@mixin onBiggestDesktop {
+  @media (min-width: 1912px) {
+    @content;
   }
-  
-  @mixin onBiggestScreen {
-    @media (max-width: 2000px) {
-      @content;
-    }
+}
+
+@mixin onBiggestScreen {
+  @media (min-width: 2000px) {
+    @content;
   }
-  
-  @mixin onBiggestScreen2 {
-    @media (max-width: 2250px) {
-      @content;
-    }
+}
+
+@mixin onBiggestScreen2 {
+  @media (min-width: 2250px) {
+    @content;
   }
-  
-  @mixin onFullHD {
-    @media (min-width: 2000px) and (max-width: 2560px) {
-      @content;
-    }
+}
+
+@mixin onFullHD {
+  @media (min-width: 2556px) {
+    @content;
   }
+}
   
   
   @mixin contentPaddingInline() {
@@ -225,4 +321,64 @@
         border: $border;
       }
     }
+  }
+
+
+  $headers: 32px;
+  $plain_text: 20px;
+  $sub: 18px;
+  $big_sub: 24px;
+  $offer: 96px;
+  
+  @include onMobile {
+    $offer: 20px;
+    $headers: 18px;
+    $big_sub: 16px;
+    $sub: 16px;
+  }
+  
+  @include onBigMobile {
+    $headers: 22px;
+  }
+  
+  @include onSmallTablet {
+    $offer: 58px;
+    $sub: 20px;
+    $headers: 24px;
+    $big_sub: 20px;
+  }
+  
+  @include onTablet {
+    $headers: 28px;
+  }
+  
+  @include onExtendedTablet {
+    $plain_text: 14px;
+  }
+  
+  @include onBigDesktop {
+    $plain_text: 16px;
+    $headers: 28px;
+    $sub: 18px;
+  }
+  
+  @include onDesktop {
+    $offer: 68px;
+    $big_sub: 28px;
+  }
+  
+  @include onExtendedDesktop {
+    $plain_text: 18px;
+  }
+  
+  @include onBiggestDesktop {
+    $headers: 32px;
+    $plain_text: 20px;
+    $sub: 18px;
+    $big_sub: 24px;
+    $offer: 20px;
+  }
+  
+  @include onFullHD {
+    $plain_text: 24px;
   }
